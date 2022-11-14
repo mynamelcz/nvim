@@ -35,14 +35,17 @@ return packer.startup(function(use)
 
   use("bluz71/vim-nightfly-guicolors")      -- 主题
   use("szw/vim-maximizer")                  -- 最大化当前窗口
-  use("kylechui/nvim-surround")             -- 成对操作，例如加（ “  ‘ 
+  use("kylechui/nvim-surround")             -- 成对操作，例如添加（ “  ‘ 
+  use("windwp/nvim-autopairs")              -- 自动成对输入 () ""  ''
   use("vim-scripts/ReplaceWithRegister")    -- replace with register contents using motion (gr + motion)
   use("numToStr/Comment.nvim")              -- 注释
   use("nvim-tree/nvim-tree.lua")            -- 文件浏览器          
   use("kyazdani42/nvim-web-devicons")       -- 文件类型图标
+  use("akinsho/bufferline.nvim")            -- 窗口上方显示文件名
   use("nvim-lualine/lualine.nvim")          -- 窗口下方的状态栏
   use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
   use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
+
 --
   ---- autocompletion
   --use("hrsh7th/nvim-cmp") -- completion plugin
