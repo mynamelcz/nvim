@@ -6,9 +6,13 @@ end
 
 bufferline.setup({
     options = {
+        modified_icon = "●",
         buffer_close_icon = "",
         left_trunc_marker = "",
         right_trunc_marker = "",
+        close_icon = '',
+        offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
+        separator_style = "thick", -- | "thick" | "thin" | { 'any', 'any' },
     }
 })
 

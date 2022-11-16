@@ -37,7 +37,7 @@ return packer.startup(function(use)
   use("szw/vim-maximizer")                  -- 最大化当前窗口
   use("kylechui/nvim-surround")             -- 成对操作，例如添加（ “  ‘ 
   use("windwp/nvim-autopairs")              -- 自动成对输入 () ""  ''
-  use("vim-scripts/ReplaceWithRegister")    -- replace with register contents using motion (gr + motion)
+  use("vim-scripts/ReplaceWithRegister")    -- 替换 (gr + motion)
   use("numToStr/Comment.nvim")              -- 注释
   use("nvim-tree/nvim-tree.lua")            -- 文件浏览器          
   use("kyazdani42/nvim-web-devicons")       -- 文件类型图标
@@ -46,31 +46,28 @@ return packer.startup(function(use)
   use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
   use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
 
---
-  ---- autocompletion
-  --use("hrsh7th/nvim-cmp") -- completion plugin
-  --use("hrsh7th/cmp-buffer") -- source for text in buffer
-  --use("hrsh7th/cmp-path") -- source for file system paths
---
-  ---- snippets
-  --use("L3MON4D3/LuaSnip") -- snippet engine
-  --use("saadparwaiz1/cmp_luasnip") -- for autocompletion
-  --use("rafamadriz/friendly-snippets") -- useful snippets
---
-  ---- managing & installing lsp servers, linters & formatters
-  --use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
-  --use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig
---
-  ---- configuring lsp servers
-  --use("neovim/nvim-lspconfig") -- easily configure language servers
-  --use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
-  --use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
-  --use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
-  --use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
---
-  ---- formatting & linting
-  --use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
-  --use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
+
+  -- 自动补全 
+  use("hrsh7th/nvim-cmp")   -- 自动补全插件
+  use("hrsh7th/cmp-buffer") -- buffer 补全 
+  use("hrsh7th/cmp-path")   -- 路径补全 
+  -- 代码段补全 
+  use("L3MON4D3/LuaSnip")           -- snippet engine
+  use("saadparwaiz1/cmp_luasnip")    -- for autocompletion
+  use("rafamadriz/friendly-snippets") -- useful snippets
+  
+  -- managing & installing lsp servers, linters & formatters
+  use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
+  use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig
+  -- configuring lsp servers
+  use("neovim/nvim-lspconfig") -- easily configure language servers
+  use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
+  use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
+  use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
+  use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
+  -- 代码格式化formatting & linting
+  use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
+  use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
 --
   -- treesitter configuration
   use({
@@ -81,7 +78,6 @@ return packer.startup(function(use)
   })
 
   ---- auto closing
-  --use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
   --use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
 --
   ---- git integration
