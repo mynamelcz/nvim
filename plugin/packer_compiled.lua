@@ -114,10 +114,20 @@ _G.packer_plugins = {
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["flit.nvim"] = {
+    loaded = true,
+    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\flit.nvim",
+    url = "https://github.com/ggandor/flit.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
+  },
+  ["leap.nvim"] = {
+    loaded = true,
+    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\leap.nvim",
+    url = "https://github.com/ggandor/leap.nvim"
   },
   ["lspkind.nvim"] = {
     loaded = true,
@@ -213,6 +223,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\typescript.nvim",
     url = "https://github.com/jose-elias-alvarez/typescript.nvim"
+  },
+  ["vim-bbye"] = {
+    loaded = true,
+    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\vim-bbye",
+    url = "https://github.com/moll/vim-bbye"
   },
   ["vim-maximizer"] = {
     loaded = true,

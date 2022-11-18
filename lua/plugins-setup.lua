@@ -33,8 +33,11 @@ return packer.startup(function(use)
 
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
+	use("moll/vim-bbye")
 	use("bluz71/vim-nightfly-guicolors") -- 主题
 	use("szw/vim-maximizer") -- 最大化当前窗口
+	use("ggandor/leap.nvim") -- 光标跳转
+	use("ggandor/flit.nvim") -- 光标跳转
 	use("kylechui/nvim-surround") -- 成对操作，例如添加（ “  ‘
 	use("windwp/nvim-autopairs") -- 自动成对输入 () ""  ''
 	use("vim-scripts/ReplaceWithRegister") -- 替换 (gr + motion)

@@ -9,6 +9,10 @@ treesitter.setup({
 	},
 	indent = { enable = true },
 	ensure_installed = {
+		"c",
+		"python",
+		"cmake",
+		"make",
 		"json",
 		"html",
 		"markdown",
