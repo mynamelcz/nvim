@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["dashboard-nvim"] = {
+    loaded = true,
+    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\dashboard-nvim",
+    url = "https://github.com/glepnir/dashboard-nvim"
+  },
   ["flit.nvim"] = {
     loaded = true,
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\flit.nvim",
@@ -238,6 +243,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\vim-nightfly-guicolors",
     url = "https://github.com/bluz71/vim-nightfly-guicolors"
+  },
+  ["vscode.nvim"] = {
+    loaded = true,
+    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\vscode.nvim",
+    url = "https://github.com/Mofiqul/vscode.nvim"
   }
 }
 

@@ -1,13 +1,17 @@
+--  <c> : Ctrl
+--  <spcse> : 空格
+--  <a> : Alt
+--  <bs>
+
 --- keymapping ---
 local opts = {
 	noremap = true, -- 禁止递归
 	silent = false, -- 显示命令
 }
 local keymap = vim.api.nvim_set_keymap
-
 --leaderkey
+keymap("n", "<Space>", "", opts)
 vim.g.mapleader = " "
-vim.g.maplocallleader = " "
 
 -- Normal 模式禁止上使用 上下左右方向键
 keymap("n", "<Up>", "<Nop>", opts)
@@ -24,7 +28,6 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 keymap("n", "<C-a>", "ggvG$", opts) -- 全选
 
 keymap("n", "x", '"_x', opts) -- 使用x删除时不会覆盖寄存器
-
 -- 切换buff
 keymap("n", "1", ":bNext<CR>", opts)
 keymap("n", "2", ":bprevious<CR>", opts)
@@ -35,9 +38,8 @@ keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
-keymap("n", "<leader>+", "<C-a>", opts) -- 数字加
-keymap("n", "<leader>-", "<C-x>", opts) -- 数字减
-
+keymap("n", "<C-p>", "<C-a>", opts) -- 数字加
+keymap("n", "<C-d>", "<C-x>", opts) -- 数字减
 keymap("n", "<leader>w", ":w<CR>", opts) -- 保存文件
 keymap("n", "<leader>q", ":Bdelete<CR>", opts) -- 关闭文件
 keymap("n", "<leader>h", ":nohlsearch<CR>", opts) -- 清除搜索高亮
@@ -66,7 +68,9 @@ keymap("v", ">", ">gv", opts)
 keymap("v", "<", "<gv", opts)
 keymap("v", "p", '"_dP', opts)
 keymap("v", "<C-c>", "ygv", opts)
-
+-- 移动文本
+keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
+keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 --------------------------------------------------
 --              Plugins Keymaps                 --
 --------------------------------------------------
