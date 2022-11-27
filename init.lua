@@ -33,17 +33,11 @@ require("plugins.telescope")
 require("plugins.treesitter")
 -- 自动补全
 require("plugins.nvim-cmp")
--- require("plugins.leap") -- 快速跳转
--- require("plugins.lsp")
+
 require("plugins.lsp.mason")
 require("plugins.lsp.lspsaga")
 require("plugins.lsp.lspconfig")
 require("plugins.lsp.null-ls")
+
 -- 自动命令
--- 保存init.lua 自动 source
-local nvimrc = vim.api.nvim_create_augroup("NVIMRC", { clear = true })
-vim.api.nvim_create_autocmd({ "BufWritePost" }, {
-	pattern = "init.lua",
-	group = nvimrc,
-	command = "source %",
-})
+require("core.autocmd")
