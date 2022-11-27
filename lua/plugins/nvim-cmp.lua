@@ -38,6 +38,7 @@ cmp.setup({
 	-- sources for autocompletion
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp" }, -- lsp
+		{ name = "nvim_lsp_signature_help" },
 		{ name = "luasnip" }, -- snippets
 		{ name = "buffer" }, -- text within current buffer
 		{ name = "path" }, -- file system paths
@@ -49,4 +50,12 @@ cmp.setup({
 			ellipsis_char = "...",
 		}),
 	},
+})
+
+-- Use cmdline & path source for ':'.
+cmp.setup.cmdline(":", {
+	mapping = cmp.mapping.preset.cmdline(),
+	sources = cmp.config.sources({
+		{ name = "cmdline" },
+	}),
 })

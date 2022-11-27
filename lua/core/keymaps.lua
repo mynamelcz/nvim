@@ -13,6 +13,10 @@ local keymap = vim.api.nvim_set_keymap
 keymap("n", "<Space>", "", opts)
 vim.g.mapleader = " "
 
+-- magic search
+keymap("n", "/", "/\\v", opts)
+keymap("v", "/", "/\\v", opts)
+
 -- Normal 模式禁止上使用 上下左右方向键
 keymap("n", "<Up>", "<Nop>", opts)
 keymap("n", "<Down>", "<Nop>", opts)
@@ -24,8 +28,13 @@ keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-k>h", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
+-- 终端模式下 切换窗口
+keymap("t", "<C-h>", "<Cmd> wincmd h<cr>", opts)
+keymap("t", "<C-j>", "<Cmd> wincmd j<cr>", opts)
+keymap("t", "<C-k>", "<Cmd> wincmd k<cr>", opts)
+keymap("t", "<C-l>", "<Cmd> wincmd l<cr>", opts)
 
-keymap("n", "<C-a>", "ggvG$", opts) -- 全选
+keymap("n", "<C-a>", "ggVG$", opts) -- 全选
 
 keymap("n", "x", '"_x', opts) -- 使用x删除时不会覆盖寄存器
 -- 切换buff
@@ -68,13 +77,18 @@ keymap("v", ">", ">gv", opts)
 keymap("v", "<", "<gv", opts)
 keymap("v", "p", '"_dP', opts)
 keymap("v", "<C-c>", "ygv", opts)
+
+-- 退出
+keymap("n", "wq", ":wq<CR>", opts)
+
 -- 移动文本
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 --------------------------------------------------
 --              Plugins Keymaps                 --
 --------------------------------------------------
-
+-- Dashboard
+keymap("n", "<leader>D", ":Dashboard<cr>", opts)
 -- vim-maximizer
 keymap("n", "<leader>sm", ":MaximizerToggle<cr>", opts) -- 最大化当前窗口
 
@@ -82,10 +96,10 @@ keymap("n", "<leader>sm", ":MaximizerToggle<cr>", opts) -- 最大化当前窗口
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 -- telescope
-keymap("n", "<leader>ff", ":Telescope find_files<cr>", opts)
-keymap("n", "<leader>fs", ":Telescope live_grep<cr>", opts)
+keymap("n", "<leader>ff", ":Telescope find_files<cr>", opts) -- 查找文件
+keymap("n", "<leader>fs", ":Telescope live_grep<cr>", opts) -- 正则查找
 keymap("n", "<leader>fc", ":Telescope grep_string<cr>", opts)
-keymap("n", "<leader>fb", ":Telescope buffers<cr>", opts)
+keymap("n", "<leader>fb", ":Telescope file_browser<cr>", opts)
 keymap("n", "<leader>fh", ":Telescope help_tags<cr>", opts)
 keymap("n", "<leader>fr", ":Telescope oldfiles<cr>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<cr>", opts)
