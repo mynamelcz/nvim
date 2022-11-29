@@ -5,8 +5,8 @@
 
 --- keymapping ---
 local opts = {
-	noremap = true, -- 禁止递归
-	silent = false, -- 显示命令
+    noremap = true, -- 禁止递归
+    silent = false, -- 显示命令
 }
 local keymap = vim.api.nvim_set_keymap
 --leaderkey
@@ -88,22 +88,26 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 --              Plugins Keymaps                 --
 --------------------------------------------------
 -- Dashboard
-keymap("n", "<leader>D", ":Dashboard<cr>", opts)
--- vim-maximizer
+
+--[[插件名: Dashboard ]]
+keymap("n", "<leader>a", ":Dashboard<cr>", opts)
+--[[插件名: vim-maximizer ]]
 keymap("n", "<leader>sm", ":MaximizerToggle<cr>", opts) -- 最大化当前窗口
-
--- nvim-tree
+--[[插件名: nvim-tree ]]
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
-
--- telescope
+--[[插件名: telescope ]]
 keymap("n", "<leader>ff", ":Telescope find_files<cr>", opts) -- 查找文件
 keymap("n", "<leader>fs", ":Telescope live_grep<cr>", opts) -- 正则查找
 keymap("n", "<leader>fc", ":Telescope grep_string<cr>", opts)
-keymap("n", "<leader>fb", ":Telescope file_browser<cr>", opts)
+keymap("n", "<leader>fb", ":Telescope buffers<cr>", opts)
 keymap("n", "<leader>fh", ":Telescope help_tags<cr>", opts)
 keymap("n", "<leader>fr", ":Telescope oldfiles<cr>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<cr>", opts)
 
+--[[插件名: tagbar ]]
+keymap("n", "<leader>t", ":Tagbar:<cr>", opts)
+--[[插件名: lf ]]
+vim.g.lf_map_keys = 0
 --[[    插件名:nvim-surround
 
     Old text                    Command         New text

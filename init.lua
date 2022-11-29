@@ -8,11 +8,13 @@ require("core.options")
 require("core.keymaps")
 -- 启动界面
 require("plugins.dashboard")
+-- Project
+require("plugins.project")
 -- 终端
 require("plugins.toggleterm")
 -- 弹窗提示
 require("plugins.nvim-notify")
-require("plugins.popup")
+-- require("plugins.popup")
 -- 缩进线
 require("plugins.indent-blankline")
 -- 语法高亮
@@ -35,9 +37,14 @@ require("plugins.treesitter")
 require("plugins.nvim-cmp")
 
 require("plugins.lsp.mason")
-require("plugins.lsp.lspsaga")
 require("plugins.lsp.lspconfig")
-require("plugins.lsp.null-ls")
+require("plugins.lsp.formatter")
+require("plugins.lsp.ui")
+
+
+
+require("plugins.lf")
+
 
 -- 自动命令
 require("core.autocmd")
