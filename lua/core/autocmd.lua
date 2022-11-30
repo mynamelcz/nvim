@@ -38,9 +38,8 @@ autocmd("BufEnter", {
 -- 	command = "startinsert",
 -- })
 --
--- 保存时自动格式化
-autocmd("BufWritePre", {
+autocmd("BufWritePost", {
+	pattern = { "*.lua", "*.py", "*.sh", "*.c", "*.h" },
 	group = myAutoGroup,
-	pattern = { "*.lua", "*.py", "*.sh" },
-	callback = vim.lsp.buf.formatting_sync,
+	command = "FormatWrite",
 })

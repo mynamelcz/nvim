@@ -41,10 +41,7 @@ require("plugins.lsp.lspconfig")
 require("plugins.lsp.formatter")
 require("plugins.lsp.ui")
 
-
-
 require("plugins.lf")
-
 
 -- 自动命令
 require("core.autocmd")

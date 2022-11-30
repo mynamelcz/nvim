@@ -131,11 +131,9 @@ return packer.startup(function(use)
     use("L3MON4D3/LuaSnip") -- snippet engine
     use("saadparwaiz1/cmp_luasnip") -- for autocompletion
     use("rafamadriz/friendly-snippets") -- useful snippets
-    use("SmiteshP/nvim-navic")
-    use("p00f/clangd_extensions.nvim")
     -- 代码格式化
     use('mhartington/formatter.nvim')
-    use("jose-elias-alvarez/null-ls.nvim")
+    -- use("jose-elias-alvarez/null-ls.nvim")
     -- TODO: Deprecated
     use({
         "Shatur/neovim-cmake",

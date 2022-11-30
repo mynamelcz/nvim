@@ -104,11 +104,6 @@ _G.packer_plugins = {
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\catppuccin",
     url = "https://github.com/catppuccin/nvim"
   },
-  ["clangd_extensions.nvim"] = {
-    loaded = true,
-    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\clangd_extensions.nvim",
-    url = "https://github.com/p00f/clangd_extensions.nvim"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\cmp-buffer",
@@ -271,11 +266,6 @@ _G.packer_plugins = {
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\nord.nvim",
     url = "https://github.com/shaunsingh/nord.nvim"
   },
-  ["null-ls.nvim"] = {
-    loaded = true,
-    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\null-ls.nvim",
-    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
-  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\nvim-autopairs",
@@ -305,11 +295,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-navic"] = {
-    loaded = true,
-    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\nvim-navic",
-    url = "https://github.com/SmiteshP/nvim-navic"
   },
   ["nvim-notify"] = {
     loaded = true,
