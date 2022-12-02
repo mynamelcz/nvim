@@ -29,7 +29,6 @@ opt.syntax = "enable" -- 语法高亮
 opt.backup = false -- 是否开启文件备份
 opt.swapfile = false -- 是否开启交换文件
 opt.writebackup = false
-
 -- jkhl 移动时光标周围保留8行
 vim.o.scrolloff = 8
 vim.o.sidescrolloff = 8

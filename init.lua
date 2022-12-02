@@ -41,6 +41,8 @@ require("plugins.lsp.lspconfig")
 require("plugins.lsp.formatter")
 require("plugins.lsp.ui")
 
+require("core.cscope")
+
 require("plugins.lf")
 
 -- 自动命令

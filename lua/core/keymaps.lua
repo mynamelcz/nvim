@@ -5,8 +5,8 @@
 
 --- keymapping ---
 local opts = {
-    noremap = true, -- 禁止递归
-    silent = false, -- 显示命令
+	noremap = true, -- 禁止递归
+	silent = false, -- 显示命令
 }
 local keymap = vim.api.nvim_set_keymap
 --leaderkey
@@ -33,10 +33,11 @@ keymap("t", "<C-h>", "<Cmd> wincmd h<cr>", opts)
 keymap("t", "<C-j>", "<Cmd> wincmd j<cr>", opts)
 keymap("t", "<C-k>", "<Cmd> wincmd k<cr>", opts)
 keymap("t", "<C-l>", "<Cmd> wincmd l<cr>", opts)
+-- 全选
+keymap("n", "<C-a>", "ggVG$", opts)
+-- 使用x删除时不会覆盖寄存器
+keymap("n", "x", '"_x', opts)
 
-keymap("n", "<C-a>", "ggVG$", opts) -- 全选
-
-keymap("n", "x", '"_x', opts) -- 使用x删除时不会覆盖寄存器
 -- 切换buff
 keymap("n", "1", ":bNext<CR>", opts)
 keymap("n", "2", ":bprevious<CR>", opts)
@@ -52,10 +53,6 @@ keymap("n", "<C-d>", "<C-x>", opts) -- 数字减
 keymap("n", "<leader>w", ":w<CR>", opts) -- 保存文件
 keymap("n", "<leader>q", ":Bdelete<CR>", opts) -- 关闭文件
 keymap("n", "<leader>h", ":nohlsearch<CR>", opts) -- 清除搜索高亮
-
--- 编辑,重新载入vimrc，init.lua
---keymap("n", "<leader>ev",":vsplit $MYVIMRC<cr>", opts)
--- keymap("n", "<leader>sv", ":source $MYVIMRC<cr>", opts)
 
 -- 光标移动
 keymap("n", "J", "5j", opts)
@@ -75,11 +72,13 @@ keymap("i", "<C-d>", "<Backspace>", opts) -- 删除键
 -- 改变缩进后，gv 重新选中原来选中的部分
 keymap("v", ">", ">gv", opts)
 keymap("v", "<", "<gv", opts)
+
 keymap("v", "p", '"_dP', opts)
+-- 复制
 keymap("v", "<C-c>", "ygv", opts)
 
 -- 退出
-keymap("n", "wq", ":wq<CR>", opts)
+keymap("n", "qq", ":wq<CR>", opts)
 
 -- 移动文本
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
@@ -87,8 +86,6 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 --------------------------------------------------
 --              Plugins Keymaps                 --
 --------------------------------------------------
--- Dashboard
-
 --[[插件名: Dashboard ]]
 keymap("n", "<leader>a", ":Dashboard<cr>", opts)
 --[[插件名: vim-maximizer ]]
@@ -103,9 +100,9 @@ keymap("n", "<leader>fb", ":Telescope buffers<cr>", opts)
 keymap("n", "<leader>fh", ":Telescope help_tags<cr>", opts)
 keymap("n", "<leader>fr", ":Telescope oldfiles<cr>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<cr>", opts)
-
 --[[插件名: tagbar ]]
-keymap("n", "<leader>t", ":Tagbar:<cr>", opts)
+keymap("n", "tl", ":Tagbar<cr>", opts)
+
 --[[插件名: lf ]]
 vim.g.lf_map_keys = 0
 --[[    插件名:nvim-surround
