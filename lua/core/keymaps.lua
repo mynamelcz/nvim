@@ -6,12 +6,15 @@
 --- keymapping ---
 local opts = {
 	noremap = true, -- 禁止递归
-	silent = false, -- 显示命令
+	silent = true, -- 显示命令
 }
 local keymap = vim.api.nvim_set_keymap
 --leaderkey
 keymap("n", "<Space>", "", opts)
 vim.g.mapleader = " "
+
+-- keymap("n", "j", "v:count == 0 ? 'gj' : 'j'", opts)
+-- keymap("n", "k", "v:count == 0 ? 'gk' : 'k'", opts)
 
 -- magic search
 keymap("n", "/", "/\\v", opts)
@@ -83,6 +86,18 @@ keymap("n", "qq", ":wq<CR>", opts)
 -- 移动文本
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
+
+vim.cmd([[
+  function! QuickFixToggle()
+    if empty(filter(getwininfo(), 'v:val.quickfix'))
+      copen
+    else
+      cclose
+    endif
+  endfunction
+]])
+keymap("n", "<F1>", ":call QuickFixToggle()<cr>", opts)
+
 --------------------------------------------------
 --              Plugins Keymaps                 --
 --------------------------------------------------
@@ -106,6 +121,11 @@ keymap("n", "tl", ":Tagbar<cr>", opts)
 --[[插件名: lf ]]
 vim.g.lf_map_keys = 0
 --[[    插件名:nvim-surround
+
+
+
+
+
 
     Old text                    Command         New text
 --------------------------------------------------------------------------------

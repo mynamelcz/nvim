@@ -416,6 +416,12 @@ _G.packer_plugins = {
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
   },
+  ["trouble.nvim"] = {
+    config = { "\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0" },
+    loaded = true,
+    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
+  },
   ["vim-autoread"] = {
     loaded = true,
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\vim-autoread",
@@ -482,6 +488,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: trouble.nvim
+time([[Config for trouble.nvim]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
+time([[Config for trouble.nvim]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
@@ -492,9 +502,9 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType cpp ++once lua require("packer.load")({'neovim-cmake'}, { ft = "cpp" }, _G.packer_plugins)]]
-vim.cmd [[au FileType c ++once lua require("packer.load")({'neovim-cmake'}, { ft = "c" }, _G.packer_plugins)]]
 vim.cmd [[au FileType cmake ++once lua require("packer.load")({'neovim-cmake'}, { ft = "cmake" }, _G.packer_plugins)]]
+vim.cmd [[au FileType c ++once lua require("packer.load")({'neovim-cmake'}, { ft = "c" }, _G.packer_plugins)]]
+vim.cmd [[au FileType cpp ++once lua require("packer.load")({'neovim-cmake'}, { ft = "cpp" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
 vim.cmd("augroup END")
 

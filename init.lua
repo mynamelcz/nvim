@@ -24,6 +24,9 @@ require("plugins.autopairs")
 require("plugins.nvim-surround")
 -- 注释
 require("plugins.comment")
+-- 快速定位光标
+require("plugins.flit")
+require("plugins.leap")
 -- 文件浏览
 require("plugins.nvim-tree")
 -- 状态栏
@@ -35,15 +38,14 @@ require("plugins.telescope")
 require("plugins.treesitter")
 -- 自动补全
 require("plugins.nvim-cmp")
-
+-- LSP
 require("plugins.lsp.mason")
 require("plugins.lsp.lspconfig")
 require("plugins.lsp.formatter")
 require("plugins.lsp.ui")
 
-require("core.cscope")
-
 require("plugins.lf")
 
 -- 自动命令
 require("core.autocmd")
+require("core.cscope")
