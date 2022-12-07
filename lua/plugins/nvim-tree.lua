@@ -4,14 +4,16 @@ if not setup then
 	return
 end
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 nvimtree.setup({
-	-- 完全禁止内置netrw
-	disable_netrw = true,
+	sort_by = "case_sensitive",
 	-- 不显示 git 状态图标
 	git = {
 		enable = false,
 	},
-	update_cwd = false,
+	update_cwd = true,
 	update_focused_file = {
 		enable = true,
 		update_cwd = false,
@@ -24,17 +26,20 @@ nvimtree.setup({
 	},
 	view = {
 		-- 宽度
-		width = 40,
-		-- 也可以 'right'
+		-- width = 40,
+		-- 自动调整宽度
+		adaptive_size = true,
+		-- 显示的位置
 		side = "left",
-		-- 隐藏根目录
+		-- 是否隐藏根目录
 		hide_root_folder = false,
-		-- 自定义列表中快捷键
-		-- mappings = {
-		-- 	-- 只用内置快捷键
-		-- 	custom_only = true,
-		-- 	list = KEYMAPS,
-		-- },
+		mappings = {
+			-- 只用内置快捷键
+			-- custom_only = true,
+			list = {
+				{ key = "u", action = "dir_up" },
+			},
+		},
 		-- 不显示行数
 		number = false,
 		relativenumber = false,
@@ -51,12 +56,12 @@ nvimtree.setup({
 	},
 	-- wsl install -g wsl-open
 	-- https://github.com/4U6U57/wsl-open/
-	system_open = {
-		-- mac
-		-- cmd = "open",
-		-- -- windows
-		cmd = "wsl-open",
-	},
+	-- system_open = {
+	-- 	-- mac
+	-- 	-- cmd = "open",
+	-- 	-- -- windows
+	-- 	-- cmd = "wsl-open",
+	-- },
 })
 
 -- -- 列表快捷键
