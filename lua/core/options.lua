@@ -29,8 +29,8 @@ opt.backup = false -- 是否开启文件备份
 opt.swapfile = false -- 是否开启交换文件
 opt.writebackup = false
 -- jkhl 移动时光标周围保留8行
-vim.o.scrolloff = 8
-vim.o.sidescrolloff = 8
+-- vim.o.scrolloff = 8
+-- vim.o.sidescrolloff = 8
 vim.o.shiftround = true
 -- 当文件被外部程序修改时，自动加载
 vim.o.autoread = true
@@ -43,3 +43,6 @@ vim.o.wildmenu = true
 vim.o.shortmess = vim.o.shortmess .. "c"
 -- 补全最多显示10行
 vim.o.pumheight = 10
+
+vim.o.statusline = vim.o.statusline .. "%f"
+vim.o.laststatus = 2

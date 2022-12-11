@@ -3,7 +3,6 @@ if not status then
 	print("bufferline not found!")
 	return
 end
-
 bufferline.setup({
 	options = {
 		close_command = "Bdelete! %d",

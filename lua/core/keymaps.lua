@@ -108,7 +108,7 @@ keymap("n", "<F1>", ":call QuickFixToggle()<cr>", opts)
 --[[插件名: Dashboard ]]
 keymap("n", "<leader>a", ":Dashboard<cr>", opts)
 --[[插件名: vim-maximizer ]]
-keymap("n", "<leader>sm", ":MaximizerToggle<cr>", opts) -- 最大化当前窗口
+keymap("n", "<leader>m", ":MaximizerToggle<cr>", opts) -- 最大化当前窗口
 --[[插件名: nvim-tree ]]
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 --[[插件名: telescope ]]

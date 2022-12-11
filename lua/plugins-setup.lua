@@ -176,7 +176,7 @@ return packer.startup(function(use)
 	-- use("vim-test/vim-test")
 	-- use("nvim-neotest/neotest")
 	--------------自动保存
-	use("Pocco81/AutoSave.nvim")
+	-- use("Pocco81/AutoSave.nvim")
 	use("djoshea/vim-autoread")
 	-- -----------j，k加速
 	-- use("rhysd/accelerated-jk")
