@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["AutoSave.nvim"] = {
+    loaded = true,
+    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\AutoSave.nvim",
+    url = "https://github.com/Pocco81/AutoSave.nvim"
+  },
   ["Comment.nvim"] = {
     loaded = true,
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\Comment.nvim",
@@ -88,11 +93,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\ReplaceWithRegister",
     url = "https://github.com/vim-scripts/ReplaceWithRegister"
-  },
-  ["accelerated-jk"] = {
-    loaded = true,
-    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\accelerated-jk",
-    url = "https://github.com/rhysd/accelerated-jk"
   },
   ["bufferline.nvim"] = {
     loaded = true,
@@ -144,10 +144,10 @@ _G.packer_plugins = {
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\dashboard-nvim",
     url = "https://github.com/glepnir/dashboard-nvim"
   },
-  ["fidget.nvim"] = {
+  everforest = {
     loaded = true,
-    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\fidget.nvim",
-    url = "https://github.com/j-hui/fidget.nvim"
+    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\everforest",
+    url = "https://github.com/sainnhe/everforest"
   },
   ["flit.nvim"] = {
     loaded = true,
@@ -164,20 +164,10 @@ _G.packer_plugins = {
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
-  ["gitsigns.nvim"] = {
-    loaded = true,
-    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\gitsigns.nvim",
-    url = "https://github.com/lewis6991/gitsigns.nvim"
-  },
   ["gruvbox.nvim"] = {
     loaded = true,
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\gruvbox.nvim",
     url = "https://github.com/ellisonleao/gruvbox.nvim"
-  },
-  ["hop.nvim"] = {
-    loaded = true,
-    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\hop.nvim",
-    url = "https://github.com/phaazon/hop.nvim"
   },
   ["impatient.nvim"] = {
     loaded = true,
@@ -203,11 +193,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\leap.nvim",
     url = "https://github.com/ggandor/leap.nvim"
-  },
-  ["lf.vim"] = {
-    loaded = true,
-    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\lf.vim",
-    url = "https://github.com/ptzz/lf.vim"
   },
   ["lspkind.nvim"] = {
     loaded = true,
@@ -244,11 +229,6 @@ _G.packer_plugins = {
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  neotest = {
-    loaded = true,
-    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\neotest",
-    url = "https://github.com/nvim-neotest/neotest"
-  },
   ["neovim-cmake"] = {
     loaded = false,
     needs_bufread = false,
@@ -275,21 +255,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
-  },
-  ["nvim-dap"] = {
-    loaded = true,
-    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\nvim-dap",
-    url = "https://github.com/mfussenegger/nvim-dap"
-  },
-  ["nvim-dap-ui"] = {
-    loaded = true,
-    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\nvim-dap-ui",
-    url = "https://github.com/rcarriga/nvim-dap-ui"
-  },
-  ["nvim-dap-virtual-text"] = {
-    loaded = true,
-    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\nvim-dap-virtual-text",
-    url = "https://github.com/theHamsta/nvim-dap-virtual-text"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -346,11 +311,6 @@ _G.packer_plugins = {
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["popup.nvim"] = {
-    loaded = true,
-    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\popup.nvim",
-    url = "https://github.com/nvim-lua/popup.nvim"
-  },
   ["project.nvim"] = {
     loaded = true,
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\project.nvim",
@@ -401,11 +361,6 @@ _G.packer_plugins = {
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["tmux.nvim"] = {
-    loaded = true,
-    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\tmux.nvim",
-    url = "https://github.com/aserowy/tmux.nvim"
-  },
   ["toggleterm.nvim"] = {
     loaded = true,
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\toggleterm.nvim",
@@ -432,16 +387,6 @@ _G.packer_plugins = {
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\vim-bbye",
     url = "https://github.com/moll/vim-bbye"
   },
-  ["vim-floaterm"] = {
-    loaded = true,
-    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\vim-floaterm",
-    url = "https://github.com/voldikss/vim-floaterm"
-  },
-  ["vim-log-highlighting"] = {
-    loaded = true,
-    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\vim-log-highlighting",
-    url = "https://github.com/mtdl9/vim-log-highlighting"
-  },
   ["vim-maximizer"] = {
     loaded = true,
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\vim-maximizer",
@@ -459,21 +404,6 @@ _G.packer_plugins = {
     only_cond = false,
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\opt\\vim-startuptime",
     url = "https://github.com/dstein64/vim-startuptime"
-  },
-  ["vim-test"] = {
-    loaded = true,
-    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\vim-test",
-    url = "https://github.com/vim-test/vim-test"
-  },
-  ["vim-translator"] = {
-    loaded = true,
-    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\vim-translator",
-    url = "https://github.com/voldikss/vim-translator"
-  },
-  vimspector = {
-    loaded = true,
-    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\vimspector",
-    url = "https://github.com/puremourning/vimspector"
   },
   ["vscode.nvim"] = {
     loaded = true,
@@ -495,16 +425,22 @@ time([[Config for trouble.nvim]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file StartupTime lua require("packer.load")({'vim-startuptime'}, { cmd = "StartupTime", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.api.nvim_create_user_command, 'StartupTime', function(cmdargs)
+          require('packer.load')({'vim-startuptime'}, { cmd = 'StartupTime', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'vim-startuptime'}, { cmd = 'StartupTime' }, _G.packer_plugins)
+          return vim.fn.getcompletion('StartupTime ', 'cmdline')
+      end})
 time([[Defining lazy-load commands]], false)
 
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType cmake ++once lua require("packer.load")({'neovim-cmake'}, { ft = "cmake" }, _G.packer_plugins)]]
-vim.cmd [[au FileType c ++once lua require("packer.load")({'neovim-cmake'}, { ft = "c" }, _G.packer_plugins)]]
 vim.cmd [[au FileType cpp ++once lua require("packer.load")({'neovim-cmake'}, { ft = "cpp" }, _G.packer_plugins)]]
+vim.cmd [[au FileType c ++once lua require("packer.load")({'neovim-cmake'}, { ft = "c" }, _G.packer_plugins)]]
+vim.cmd [[au FileType cmake ++once lua require("packer.load")({'neovim-cmake'}, { ft = "cmake" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
 vim.cmd("augroup END")
 

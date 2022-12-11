@@ -1,4 +1,5 @@
-local colorscheme = "nightfox"
+local colorscheme = "everforest"
+-- everforest
 -- tokyonight
 -- OceanicNext
 -- gruvbox

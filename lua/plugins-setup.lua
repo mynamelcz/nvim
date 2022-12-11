@@ -40,11 +40,12 @@ return packer.startup(function(use)
 	--------------------- 启动界面 --------------------
 	use("glepnir/dashboard-nvim")
 	--------------------- 弹窗窗口 --------------------
-	use("nvim-lua/popup.nvim")
+	-- use("nvim-lua/popup.nvim")
 	use("rcarriga/nvim-notify")
 	------------------ 最大化当前窗口 --------------------
 	use("szw/vim-maximizer")
 	--------------------- 主题设置 --------------------
+	use("sainnhe/everforest")
 	-- tokyonight
 	use("folke/tokyonight.nvim")
 	-- OceanicNext
@@ -93,8 +94,7 @@ return packer.startup(function(use)
 	use("lukas-reineke/indent-blankline.nvim")
 	---------------- 注    释 -----------------
 	use("numToStr/Comment.nvim")
-	---------------- hop跳转  -----------------
-	use({ "phaazon/hop.nvim", branch = "v1" })
+	---------------- 跳     转  -----------------
 	use("ggandor/flit.nvim")
 	use("ggandor/leap-ast.nvim")
 	use("ggandor/leap-spooky.nvim")
@@ -150,38 +150,38 @@ return packer.startup(function(use)
 		end,
 	})
 
-	-- git
-	use({ "lewis6991/gitsigns.nvim" })
-	-- vimspector
-	use("puremourning/vimspector")
-	---------------------------dap调试--------------
-	use("mfussenegger/nvim-dap")
-	use("theHamsta/nvim-dap-virtual-text")
-	use({
-		"rcarriga/nvim-dap-ui",
-		requires = { "mfussenegger/nvim-dap" },
-	})
-	-------------lf插件----------
-	use({
-		"ptzz/lf.vim",
-		requires = { "voldikss/vim-floaterm" },
-	})
-	-----翻译插件
-	use("voldikss/vim-translator")
-	--------高亮
-	use("mtdl9/vim-log-highlighting")
-	--------显示lsp状态
-	use("j-hui/fidget.nvim")
-	----------------测试代码片段
-	use("vim-test/vim-test")
-	use("nvim-neotest/neotest")
+	-- -- git
+	-- use({ "lewis6991/gitsigns.nvim" })
+	-- -- vimspector
+	-- use("puremourning/vimspector")
+	-- ---------------------------dap调试--------------
+	-- use("mfussenegger/nvim-dap")
+	-- use("theHamsta/nvim-dap-virtual-text")
+	-- use({
+	-- 	"rcarriga/nvim-dap-ui",
+	-- 	requires = { "mfussenegger/nvim-dap" },
+	-- })
+	-- -------------lf插件----------
+	-- use({
+	-- 	"ptzz/lf.vim",
+	-- 	requires = { "voldikss/vim-floaterm" },
+	-- })
+	-- -----翻译插件
+	-- use("voldikss/vim-translator")
+	-- --------高亮
+	-- use("mtdl9/vim-log-highlighting")
+	-- --------显示lsp状态
+	-- use("j-hui/fidget.nvim")
+	-- ----------------测试代码片段
+	-- use("vim-test/vim-test")
+	-- use("nvim-neotest/neotest")
 	--------------自动保存
-	--use("Pocco81/AutoSave.nvim")
+	use("Pocco81/AutoSave.nvim")
 	use("djoshea/vim-autoread")
-	-----------j，k加速
-	use("rhysd/accelerated-jk")
-	------------导航栏
-	use("aserowy/tmux.nvim")
+	-- -----------j，k加速
+	-- use("rhysd/accelerated-jk")
+	-- ------------导航栏
+	-- use("aserowy/tmux.nvim")
 
 	if packer_bootstrap then
 		require("packer").sync()

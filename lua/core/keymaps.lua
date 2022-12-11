@@ -63,6 +63,9 @@ keymap("n", "K", "5k", opts)
 keymap("n", "H", "^", opts)
 keymap("n", "L", "$", opts)
 
+-- 输入TAB
+keymap("n", "<Tab>", "i<Tab><Esc>l", opts)
+
 keymap("i", "jj", "<ESC>", opts) -- 退出insert模式
 
 --- 插入模式移动光标
@@ -87,6 +90,7 @@ keymap("n", "qq", ":wq<CR>", opts)
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 
+-- cscope
 vim.cmd([[
   function! QuickFixToggle()
     if empty(filter(getwininfo(), 'v:val.quickfix'))
@@ -121,12 +125,6 @@ keymap("n", "tl", ":Tagbar<cr>", opts)
 --[[插件名: lf ]]
 vim.g.lf_map_keys = 0
 --[[    插件名:nvim-surround
-
-
-
-
-
-
     Old text                    Command         New text
 --------------------------------------------------------------------------------
     surround_words             ysiw)           (surround_words)

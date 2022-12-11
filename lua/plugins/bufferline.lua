@@ -15,8 +15,8 @@ bufferline.setup({
 		left_trunc_marker = "",
 		right_trunc_marker = "",
 		close_icon = "",
-		offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
-		separator_style = "thick", -- | "thick" | "thin" | { 'any', 'any' },
+		offsets = { { filetype = "NvimTree", text = "NvimTree", padding = 1 } },
+		separator_style = "thin", -- | "thick" | "thin" | { 'any', 'any' },
 	},
 })
 

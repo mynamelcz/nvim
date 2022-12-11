@@ -37,14 +37,12 @@ require("plugins.telescope")
 -- 代码高亮
 require("plugins.treesitter")
 -- 自动补全
-require("plugins.nvim-cmp")
+require("plugins.lsp.nvim-cmp")
 -- LSP
 require("plugins.lsp.mason")
 require("plugins.lsp.lspconfig")
 require("plugins.lsp.formatter")
 require("plugins.lsp.ui")
-
-require("plugins.lf")
 
 -- 自动命令
 require("core.autocmd")

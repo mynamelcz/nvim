@@ -8,7 +8,6 @@ opt.tabstop = 4 -- tab 缩进4个空格
 opt.shiftwidth = 4 -- tab 缩进4个空格
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true --
-opt.wrap = false --
 opt.ignorecase = true -- 搜索大小写不敏感
 opt.smartcase = true -- 若包含大写字母则只匹配大写
 opt.cursorline = true -- 高亮光标所在行
@@ -36,11 +35,6 @@ vim.o.shiftround = true
 -- 当文件被外部程序修改时，自动加载
 vim.o.autoread = true
 vim.bo.autoread = true
--- split window 从下边和右边出现
-vim.o.splitbelow = true
-vim.o.splitright = true
--- 自动补全不自动选中
-vim.g.completeopt = "menu,menuone,noselect,noinsert"
 -- 是否显示不可见字符
 vim.o.list = true
 -- 补全增强
@@ -49,5 +43,3 @@ vim.o.wildmenu = true
 vim.o.shortmess = vim.o.shortmess .. "c"
 -- 补全最多显示10行
 vim.o.pumheight = 10
--- 使用增强状态栏插件后不再需要 vim 的模式提示
-vim.o.showmode = false

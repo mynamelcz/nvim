@@ -32,7 +32,7 @@ local on_attach = function(client, bufnr)
 	keymap.set("n", "\\e", ":TroubleToggle<CR>", opts) -- jump to previous diagnostic in buffer
 
 	-- 显示函数变量列表
-	-- keymap.set("n", "<leader>o", "<cmd>LSoutlineToggle<CR>", opts) -- see outline on right hand side
+	keymap.set("n", "go", "<cmd>LSoutlineToggle<CR>", opts) -- see outline on right hand side
 	-- keymap.set("n", "gs", "<cmd>Lspsaga signature_help<CR>", opts)
 	-- keymap.set("n", "gD", "<Cmd>Lspsaga lua vim.lsp.buf.declaration()<CR>", opts) -- got to declaration
 	-- keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) -- go to implementation
@@ -77,12 +77,11 @@ lspconfig["sumneko_lua"].setup({
 		},
 	},
 })
-
 capabilities.offsetEncoding = { "utf-16" }
 lspconfig["clangd"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
-	filetypes = { "c", "cpp", "h", "objc", "objcpp" },
+	filetypes = { "c", "cpp", "objc", "objcpp" },
 	single_file_support = true,
 })
 
