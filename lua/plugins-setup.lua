@@ -38,7 +38,8 @@ return packer.startup(function(use)
 	--------------------- 加速lua --------------------
 	use("lewis6991/impatient.nvim")
 	--------------------- 启动界面 --------------------
-	use("glepnir/dashboard-nvim")
+	use({ "goolord/alpha-nvim" })
+	-- use("glepnir/dashboard-nvim")
 	--------------------- 弹窗窗口 --------------------
 	-- use("nvim-lua/popup.nvim")
 	use("rcarriga/nvim-notify")
@@ -85,7 +86,7 @@ return packer.startup(function(use)
 	---------------- markdown预览 -------------
 	use("iamcco/markdown-preview.nvim")
 	---------------- project管理 --------------
-	use("ahmedkhalf/project.nvim")
+	-- use("ahmedkhalf/project.nvim")
 	---------------- 语法高亮 -----------------
 	use("nvim-treesitter/nvim-treesitter")
 	---------------- 彩色括号 -----------------

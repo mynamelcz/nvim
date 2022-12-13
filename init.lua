@@ -7,7 +7,7 @@ require("core.options")
 -- 按键映射
 require("core.keymaps")
 -- 启动界面
-require("plugins.dashboard")
+require("plugins.alpha")
 -- Project
 require("plugins.project")
 -- 终端
