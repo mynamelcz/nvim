@@ -39,9 +39,7 @@ return packer.startup(function(use)
 	use("lewis6991/impatient.nvim")
 	--------------------- 启动界面 --------------------
 	use({ "goolord/alpha-nvim" })
-	-- use("glepnir/dashboard-nvim")
 	--------------------- 弹窗窗口 --------------------
-	-- use("nvim-lua/popup.nvim")
 	use("rcarriga/nvim-notify")
 	------------------ 最大化当前窗口 --------------------
 	use("szw/vim-maximizer")
@@ -49,22 +47,12 @@ return packer.startup(function(use)
 	use("sainnhe/everforest")
 	-- tokyonight
 	use("folke/tokyonight.nvim")
-	-- OceanicNext
-	use("mhartington/oceanic-next")
 	-- gruvbox
 	use("ellisonleao/gruvbox.nvim")
-	-- zephyr
-	use("glepnir/zephyr-nvim")
-	-- nord
-	use("shaunsingh/nord.nvim")
-	-- onedark
-	use("ful1e5/onedark.nvim")
 	-- nightfox
 	use("EdenEast/nightfox.nvim")
 	-- catppuccin
 	use({ "catppuccin/nvim", as = "catppuccin" })
-	-- vim-nightfly-guicolors
-	use("bluz71/vim-nightfly-guicolors")
 	-- vscode
 	use("Mofiqul/vscode.nvim")
 	------------------ 文件浏览 -----------------
@@ -86,7 +74,7 @@ return packer.startup(function(use)
 	---------------- markdown预览 -------------
 	use("iamcco/markdown-preview.nvim")
 	---------------- project管理 --------------
-	-- use("ahmedkhalf/project.nvim")
+	use("ahmedkhalf/project.nvim")
 	---------------- 语法高亮 -----------------
 	use("nvim-treesitter/nvim-treesitter")
 	---------------- 彩色括号 -----------------
@@ -133,12 +121,6 @@ return packer.startup(function(use)
 	use("rafamadriz/friendly-snippets") -- useful snippets
 	-- 代码格式化
 	use("mhartington/formatter.nvim")
-	-- use("jose-elias-alvarez/null-ls.nvim")
-	-- TODO: Deprecated
-	use({
-		"Shatur/neovim-cmake",
-		ft = { "c", "cpp", "cmake" },
-	})
 	-- 显示错误列表
 	use({
 		"folke/trouble.nvim",
@@ -150,40 +132,9 @@ return packer.startup(function(use)
 			})
 		end,
 	})
-
-	-- -- git
-	-- use({ "lewis6991/gitsigns.nvim" })
-	-- -- vimspector
-	-- use("puremourning/vimspector")
-	-- ---------------------------dap调试--------------
-	-- use("mfussenegger/nvim-dap")
-	-- use("theHamsta/nvim-dap-virtual-text")
-	-- use({
-	-- 	"rcarriga/nvim-dap-ui",
-	-- 	requires = { "mfussenegger/nvim-dap" },
-	-- })
-	-- -------------lf插件----------
-	-- use({
-	-- 	"ptzz/lf.vim",
-	-- 	requires = { "voldikss/vim-floaterm" },
-	-- })
-	-- -----翻译插件
-	-- use("voldikss/vim-translator")
-	-- --------高亮
-	-- use("mtdl9/vim-log-highlighting")
-	-- --------显示lsp状态
-	-- use("j-hui/fidget.nvim")
-	-- ----------------测试代码片段
-	-- use("vim-test/vim-test")
-	-- use("nvim-neotest/neotest")
 	--------------自动保存
 	-- use("Pocco81/AutoSave.nvim")
 	use("djoshea/vim-autoread")
-	-- -----------j，k加速
-	-- use("rhysd/accelerated-jk")
-	-- ------------导航栏
-	-- use("aserowy/tmux.nvim")
-
 	if packer_bootstrap then
 		require("packer").sync()
 	end

@@ -224,22 +224,10 @@ _G.packer_plugins = {
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["neovim-cmake"] = {
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\opt\\neovim-cmake",
-    url = "https://github.com/Shatur/neovim-cmake"
-  },
   ["nightfox.nvim"] = {
     loaded = true,
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\nightfox.nvim",
     url = "https://github.com/EdenEast/nightfox.nvim"
-  },
-  ["nord.nvim"] = {
-    loaded = true,
-    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\nord.nvim",
-    url = "https://github.com/shaunsingh/nord.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -286,16 +274,6 @@ _G.packer_plugins = {
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
-  ["oceanic-next"] = {
-    loaded = true,
-    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\oceanic-next",
-    url = "https://github.com/mhartington/oceanic-next"
-  },
-  ["onedark.nvim"] = {
-    loaded = true,
-    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\onedark.nvim",
-    url = "https://github.com/ful1e5/onedark.nvim"
-  },
   ["packer.nvim"] = {
     loaded = true,
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
@@ -305,6 +283,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["project.nvim"] = {
+    loaded = true,
+    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\project.nvim",
+    url = "https://github.com/ahmedkhalf/project.nvim"
   },
   tagbar = {
     loaded = true,
@@ -382,11 +365,6 @@ _G.packer_plugins = {
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\vim-maximizer",
     url = "https://github.com/szw/vim-maximizer"
   },
-  ["vim-nightfly-guicolors"] = {
-    loaded = true,
-    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\vim-nightfly-guicolors",
-    url = "https://github.com/bluz71/vim-nightfly-guicolors"
-  },
   ["vim-startuptime"] = {
     commands = { "StartupTime" },
     loaded = false,
@@ -399,11 +377,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\vscode.nvim",
     url = "https://github.com/Mofiqul/vscode.nvim"
-  },
-  ["zephyr-nvim"] = {
-    loaded = true,
-    path = "F:\\nvim-win64\\config\\nvim-data\\site\\pack\\packer\\start\\zephyr-nvim",
-    url = "https://github.com/glepnir/zephyr-nvim"
   }
 }
 
@@ -424,15 +397,6 @@ pcall(vim.api.nvim_create_user_command, 'StartupTime', function(cmdargs)
       end})
 time([[Defining lazy-load commands]], false)
 
-vim.cmd [[augroup packer_load_aucmds]]
-vim.cmd [[au!]]
-  -- Filetype lazy-loads
-time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType c ++once lua require("packer.load")({'neovim-cmake'}, { ft = "c" }, _G.packer_plugins)]]
-vim.cmd [[au FileType cmake ++once lua require("packer.load")({'neovim-cmake'}, { ft = "cmake" }, _G.packer_plugins)]]
-vim.cmd [[au FileType cpp ++once lua require("packer.load")({'neovim-cmake'}, { ft = "cpp" }, _G.packer_plugins)]]
-time([[Defining lazy-load filetype autocommands]], false)
-vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

@@ -1,5 +1,4 @@
 local opt = vim.opt
-
 opt.encoding = "utf-8" -- UTF-8
 opt.fileencoding = "utf-8" -- UTF-8
 opt.number = true -- 行号
@@ -28,6 +27,10 @@ opt.syntax = "enable" -- 语法高亮
 opt.backup = false -- 是否开启文件备份
 opt.swapfile = false -- 是否开启交换文件
 opt.writebackup = false
+opt.pumheight = 15 -- 补全最多显示15行
+opt.cmdheight = 0 -- 不输入命令时隐藏命令行
+opt.lazyredraw = true -- lazily redraw screen
+
 -- -- jkhl 移动时光标周围保留8行
 -- -- vim.o.scrolloff = 8
 -- -- vim.o.sidescrolloff = 8
@@ -41,8 +44,6 @@ opt.writebackup = false
 -- vim.o.wildmenu = true
 -- -- Dont' pass messages to |ins-completin menu|
 -- vim.o.shortmess = vim.o.shortmess .. "c"
--- -- 补全最多显示10行
--- vim.o.pumheight = 10
 --
 -- vim.o.statusline = vim.o.statusline .. "%f"
 -- vim.o.laststatus = 2

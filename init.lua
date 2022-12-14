@@ -14,7 +14,6 @@ require("plugins.project")
 require("plugins.toggleterm")
 -- 弹窗提示
 require("plugins.nvim-notify")
--- require("plugins.popup")
 -- 缩进线
 require("plugins.indent-blankline")
 -- 语法高亮
