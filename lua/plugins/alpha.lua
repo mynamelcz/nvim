@@ -70,7 +70,7 @@ dashboard.section.buttons.val = {
 	dashboard.button("2", "  Projects", ":Telescope projects <CR>"),
 	dashboard.button("3", "  Find File", ":Telescope find_files <CR>"),
 	dashboard.button("4", "  Find Word", ":Telescope live_grep <CR>"),
-	dashboard.button("5", "  Edit init", ":edit " .. nvim_path .. "/lua/init.lua <CR>"),
+	dashboard.button("5", "  Edit init", ":edit " .. nvim_path .. "/init.lua <CR>"),
 	dashboard.button("6", "  Edit Optoion", ":edit " .. nvim_path .. "/lua/core/options.lua <CR>"),
 	dashboard.button("7", "  Edit Keymaps", ":edit " .. nvim_path .. "/lua/core/keymaps.lua <CR>"),
 
