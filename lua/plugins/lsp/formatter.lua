@@ -46,7 +46,7 @@ formatter.setup({
 			-- black
 			function()
 				return {
-					exe = "black",
+					exe = "yapf", -- "black",
 					args = {},
 					stdin = true,
 					try_node_modules = true,

@@ -5,18 +5,20 @@ import json
 srcs = []
 incdirs = []
 flags = [
-        "-c", "-fvisibility=hidden", "-O3",
-        "-std=gnu11", "-nostartfiles", "--specs=nosys.specs",
-        "-DNDEBUG"
-        ]
+    "-c", "-fvisibility=hidden", "-O3", "-std=gnu11", "-nostartfiles",
+    "--specs=nosys.specs", "-DNDEBUG"
+]
 
-toolchain_home = os.path.abspath('D:/Andestech/AndeSight_STD_v511/toolchains/nds32le-elf-mculib-v5f/')
+toolchain_home = os.path.abspath(
+    'D:/Andestech/AndeSight_STD_v511/toolchains/nds32le-elf-mculib-v5f/')
 sysincdirs = [
-        '-I%s' % os.path.join(toolchain_home, 'riscv32-elf/include'),
-        '-I%s' % os.path.join(toolchain_home, 'riscv32-elf/sys-include'),
-        '-I%s' % os.path.join(toolchain_home, 'lib/gcc/riscv32-elf/10.3.0/include'),
-        '-I%s' % os.path.join(toolchain_home, 'lib/gcc/riscv32-elf/10.3.0/include-fixed')
-        ]
+    '-I%s' % os.path.join(toolchain_home, 'riscv32-elf/include'),
+    '-I%s' % os.path.join(toolchain_home, 'riscv32-elf/sys-include'),
+    '-I%s' %
+    os.path.join(toolchain_home, 'lib/gcc/riscv32-elf/10.3.0/include'),
+    '-I%s' %
+    os.path.join(toolchain_home, 'lib/gcc/riscv32-elf/10.3.0/include-fixed')
+]
 toolchain = os.path.join(toolchain_home, 'bin/riscv32-elf-gcc.exe')
 
 project = os.path.abspath('.')
@@ -35,7 +37,7 @@ args.append(toolchain)
 args.extend(flags)
 args.extend(sysincdirs)
 args.extend(incdirs)
-
+print(args)
 for file in srcs:
     d = {}
     d['directory'] = project
@@ -50,5 +52,3 @@ for file in srcs:
 with open('compile_commands.json', 'w') as f:
     json.dump(dump, f, indent=1)
     f.close()
-
-
