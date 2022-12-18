@@ -4,7 +4,12 @@ if not status then
 	return
 end
 
+local util = require("formatter.util")
 formatter.setup({
+	-- Enable or disable logging
+	logging = true,
+	-- Set the log level
+	log_level = vim.log.levels.WARN,
 	filetype = {
 		-- cpp = {
 		--     -- clang-format
@@ -19,6 +24,9 @@ formatter.setup({
 		-- },
 		lua = {
 			function()
+				if util.get_current_buffer_file_name() == "xmake.lua" then
+					return
+				end
 				return {
 					exe = "stylua",
 					args = {

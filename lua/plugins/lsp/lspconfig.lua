@@ -30,11 +30,9 @@ local on_attach = function(client, bufnr)
 	-- keymap.set("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts) -- jump to previous diagnostic in buffer
 	-- keymap.set("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
 	keymap.set("n", "\\e", ":TroubleToggle<CR>", opts) -- jump to previous diagnostic in buffer
-
 	-- 显示函数变量列表
-	keymap.set("n", "go", "<cmd>LSoutlineToggle<CR>", opts) -- see outline on right hand side
+	keymap.set("n", "go", "<cmd>Lspsaga outline<CR>", opts) -- see outline on right hand side
 	-- keymap.set("n", "gs", "<cmd>Lspsaga signature_help<CR>", opts)
-	-- keymap.set("n", "gD", "<Cmd>Lspsaga lua vim.lsp.buf.declaration()<CR>", opts) -- got to declaration
 	-- keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) -- go to implementation
 	-- keymap.set("n", "<leader>d", "<cmd>Lspsaga show_line_diagnostics<CR>", opts) -- show  diagnostics for line
 	-- keymap.set("n", "<leader>d", "<cmd>Lspsaga show_cursor_diagnostics<CR>", opts) -- show diagnostics for cursor

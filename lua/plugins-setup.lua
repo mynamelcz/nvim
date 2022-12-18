@@ -72,7 +72,12 @@ return packer.startup(function(use)
 	use("nvim-telescope/telescope-rg.nvim")
 	use("nvim-telescope/telescope-dap.nvim")
 	---------------- markdown预览 -------------
-	use("iamcco/markdown-preview.nvim")
+	-- use("iamcco/markdown-preview.nvim")
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = "cd app && npm install",
+		ft = "markdown",
+	})
 	---------------- project管理 --------------
 	use("ahmedkhalf/project.nvim")
 	---------------- 语法高亮 -----------------
@@ -125,15 +130,14 @@ return packer.startup(function(use)
 	use({
 		"folke/trouble.nvim",
 		config = function()
-			require("trouble").setup({
-				-- your configuration comes here
-				-- or leave it empty to use the default settings
-				-- refer to the configuration section below
-			})
+			require("trouble").setup({})
 		end,
 	})
-	--------------自动保存
-	-- use("Pocco81/AutoSave.nvim")
+
+	use("luzhlon/x.vim")
+	use("luzhlon/qrun.vim")
+	use("luzhlon/xmake.vim")
+
 	use("djoshea/vim-autoread")
 	if packer_bootstrap then
 		require("packer").sync()

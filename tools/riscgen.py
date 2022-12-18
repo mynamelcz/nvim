@@ -2,6 +2,8 @@ import os
 import re
 import json
 
+DEFINES = ["-DUSE_STD_DRIVER", "-D__FPU_PRESENT"]
+
 srcs = []
 incdirs = []
 flags = [
@@ -9,32 +11,42 @@ flags = [
     "--specs=nosys.specs", "-DNDEBUG"
 ]
 
-toolchain_home = os.path.abspath(
-    'D:/Andestech/AndeSight_STD_v511/toolchains/nds32le-elf-mculib-v5f/')
+# toolchain_home = os.path.abspath(
+#     'D:/Andestech/AndeSight_STD_v511/toolchains/nds32le-elf-mculib-v5f/')
+# sysincdirs = [
+#     '-I%s' % os.path.join(toolchain_home, 'riscv32-elf/include'),
+#     '-I%s' % os.path.join(toolchain_home, 'riscv32-elf/sys-include'),
+#     '-I%s' %
+#     os.path.join(toolchain_home, 'lib/gcc/riscv32-elf/10.3.0/include'),
+#     '-I%s' %
+#     os.path.join(toolchain_home, 'lib/gcc/riscv32-elf/10.3.0/include-fixed')
+# ]
+# toolchain = os.path.join(toolchain_home, 'bin/riscv32-elf-gcc.exe')
+#
+
 sysincdirs = [
-    '-I%s' % os.path.join(toolchain_home, 'riscv32-elf/include'),
-    '-I%s' % os.path.join(toolchain_home, 'riscv32-elf/sys-include'),
-    '-I%s' %
-    os.path.join(toolchain_home, 'lib/gcc/riscv32-elf/10.3.0/include'),
-    '-I%s' %
-    os.path.join(toolchain_home, 'lib/gcc/riscv32-elf/10.3.0/include-fixed')
+    '-IF:/MDK5/ARM/ARMCC/include',
+    '-IF:/MDK5/ARM/ARMCC/include/rw',
 ]
-toolchain = os.path.join(toolchain_home, 'bin/riscv32-elf-gcc.exe')
+toolchain = "F:/MDK5/ARM/ARMCC/bin/armcc.exe"
 
 project = os.path.abspath('.')
 for root, dir, files in os.walk(project):
     for file in files:
         if re.search(r'\.c$|\.s$', file):
+            print(os.path.join(root, file))
             srcs.append(os.path.join(root, file))
         if re.search(r'\.h$', file):
             inc = '-I%s' % root
             if inc not in incdirs:
+                print(inc)
                 incdirs.append(inc)
 
 dump = []
 args = []
 args.append(toolchain)
 args.extend(flags)
+args.append(DEFINES)
 args.extend(sysincdirs)
 args.extend(incdirs)
 print(args)
