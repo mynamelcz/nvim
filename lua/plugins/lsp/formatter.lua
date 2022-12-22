@@ -51,7 +51,6 @@ formatter.setup({
 			end,
 		},
 		python = {
-			-- black
 			function()
 				return {
 					exe = "yapf", -- "black",
