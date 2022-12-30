@@ -13,7 +13,7 @@ nvimtree.setup({
 	git = {
 		enable = false,
 	},
-	update_cwd = false,
+	update_cwd = true,
 	update_focused_file = {
 		enable = false,
 		update_cwd = false,

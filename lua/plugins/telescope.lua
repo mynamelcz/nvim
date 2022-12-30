@@ -33,6 +33,14 @@ end
 
 telescope.setup({
 	defaults = {
+		-- 搜索时忽略指定的文件
+		file_ignore_patterns = {
+			"tags",
+			"cscope.out",
+			"cscope.in.out",
+			"cscope.po.out",
+			"compile_commands.json",
+		},
 		layout_config = { width = 0.98, preview_cutoff = 1 },
 		mappings = {
 			i = {
@@ -50,6 +58,7 @@ telescope.setup({
 			},
 		},
 	},
+
 	pickers = {
 		find_files = {
 			--theme = "dropdown", -- 可选参数： dropdown, cursor, ivy

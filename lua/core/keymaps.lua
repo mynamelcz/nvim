@@ -70,8 +70,8 @@ keymap("i", "jj", "<ESC>", opts) -- 退出insert模式
 
 --- 插入模式移动光标
 keymap("i", "<C-h>", "<Left>", opts)
-keymap("i", "<C-j>", "<Up>", opts)
-keymap("i", "<C-k>", "<Down>", opts)
+keymap("i", "<C-k>", "<Up>", opts)
+keymap("i", "<C-j>", "<Down>", opts)
 keymap("i", "<C-l>", "<Right>", opts)
 keymap("i", "<C-d>", "<Backspace>", opts) -- 删除键
 
