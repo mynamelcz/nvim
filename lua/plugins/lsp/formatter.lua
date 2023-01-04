@@ -11,17 +11,6 @@ formatter.setup({
 	-- Set the log level
 	log_level = vim.log.levels.WARN,
 	filetype = {
-		-- cpp = {
-		--     -- clang-format
-		--     function()
-		--         return {
-		--             exe = "clang-format -style=Microsoft",
-		--             args = {},
-		--             stdin = true,
-		--             try_node_modules = true,
-		--         }
-		--     end,
-		-- },
 		lua = {
 			function()
 				if util.get_current_buffer_file_name() == "xmake.lua" then
@@ -44,19 +33,21 @@ formatter.setup({
 			function()
 				return {
 					exe = "clang-format -style=Microsoft",
-					args = {},
+					-- args = {},
+					args = { "--assume-filename", vim.api.nvim_buf_get_name(0) },
 					stdin = true,
-					try_node_modules = true,
+					-- try_node_modules = true,
+					cwd = vim.fn.expand("%:p:h"), -- Run clang-format in cwd of the file.
 				}
 			end,
 		},
 		python = {
 			function()
 				return {
-					exe = "yapf", -- "black",
-					args = {},
+					exe = "black", --yapf", -- "black",
+					args = { "-" },
 					stdin = true,
-					try_node_modules = true,
+					-- try_node_modules = true,
 				}
 			end,
 		},

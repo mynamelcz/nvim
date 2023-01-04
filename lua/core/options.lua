@@ -16,7 +16,7 @@ opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or 
 opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
-opt.iskeyword:append("-") -- consider string-string as whole word
+-- opt.iskeyword:append("-") -- consider string-string as whole word
 opt.history = 100 -- 历史命令条数
 opt.showtabline = 2 -- 永远显示tabline(窗口上方的文件名)
 opt.termguicolors = true -- 使能样式设置

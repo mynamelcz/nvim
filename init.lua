@@ -9,7 +9,7 @@ require("core.keymaps")
 -- 启动界面
 require("plugins.alpha")
 -- Project
-require("plugins.project")
+-- require("plugins.project")
 -- 终端
 require("plugins.toggleterm")
 -- 弹窗提示

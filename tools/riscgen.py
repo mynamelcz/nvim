@@ -7,8 +7,13 @@ DEFINES = ["-DUSE_STD_DRIVER", "-D__FPU_PRESENT"]
 srcs = []
 incdirs = []
 flags = [
-    "-c", "-fvisibility=hidden", "-O3", "-std=gnu11", "-nostartfiles",
-    "--specs=nosys.specs", "-DNDEBUG"
+    "-c",
+    "-fvisibility=hidden",
+    "-O3",
+    "-std=gnu11",
+    "-nostartfiles",
+    "--specs=nosys.specs",
+    "-DNDEBUG",
 ]
 
 # toolchain_home = os.path.abspath(
@@ -25,19 +30,19 @@ flags = [
 #
 
 sysincdirs = [
-    '-IF:/MDK5/ARM/ARMCC/include',
-    '-IF:/MDK5/ARM/ARMCC/include/rw',
+    "-IF:/MDK5/ARM/ARMCC/include",
+    "-IF:/MDK5/ARM/ARMCC/include/rw",
 ]
 toolchain = "F:/MDK5/ARM/ARMCC/bin/armcc.exe"
 
-project = os.path.abspath('.')
+project = os.path.abspath(".")
 for root, dir, files in os.walk(project):
     for file in files:
-        if re.search(r'\.c$|\.s$', file):
+        if re.search(r"\.c$|\.s$", file):
             print(os.path.join(root, file))
             srcs.append(os.path.join(root, file))
-        if re.search(r'\.h$', file):
-            inc = '-I%s' % root
+        if re.search(r"\.h$", file):
+            inc = "-I%s" % root
             if inc not in incdirs:
                 print(inc)
                 incdirs.append(inc)
@@ -52,15 +57,15 @@ args.extend(incdirs)
 print(args)
 for file in srcs:
     d = {}
-    d['directory'] = project
+    d["directory"] = project
     d_args = []
     d_args.extend(args)
     d_args.append("-o %s.o" % file)
     d_args.append(file)
-    d['arguments'] = d_args
-    d['file'] = file
+    d["arguments"] = d_args
+    d["file"] = file
     dump.append(d)
 
-with open('compile_commands.json', 'w') as f:
+with open("compile_commands.json", "w") as f:
     json.dump(dump, f, indent=1)
     f.close()
