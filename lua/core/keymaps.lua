@@ -63,8 +63,8 @@ keymap("n", "K", "5k", opts)
 keymap("n", "H", "^", opts)
 keymap("n", "L", "$", opts)
 
--- 输入TAB
-keymap("n", "<Tab>", "i<Tab><Esc>l", opts)
+-- 输入TAB 会导致浏览代码前进后退有问题
+-- keymap("n", "<Tab>", "i<Tab><Esc>l", opts)
 
 keymap("i", "jj", "<ESC>", opts) -- 退出insert模式
 
@@ -112,10 +112,10 @@ keymap("n", "<leader>m", ":MaximizerToggle<cr>", opts) -- 最大化当前窗口
 --[[插件名: nvim-tree ]]
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 --[[插件名: telescope ]]
+keymap("n", "<leader>b", ":Telescope buffers<cr>", opts)
 keymap("n", "<leader>ff", ":Telescope find_files<cr>", opts) -- 查找文件
 keymap("n", "<leader>fs", ":Telescope live_grep<cr>", opts) -- 正则查找
 keymap("n", "<leader>fc", ":Telescope grep_string<cr>", opts)
-keymap("n", "<leader>fb", ":Telescope buffers<cr>", opts)
 keymap("n", "<leader>fh", ":Telescope help_tags<cr>", opts)
 keymap("n", "<leader>fr", ":Telescope oldfiles<cr>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<cr>", opts)

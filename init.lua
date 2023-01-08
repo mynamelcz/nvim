@@ -28,6 +28,7 @@ require("plugins.flit")
 require("plugins.leap")
 -- 文件浏览
 require("plugins.nvim-tree")
+require("plugins.image")
 -- 状态栏
 require("plugins.lualine")
 require("plugins.bufferline")

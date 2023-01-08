@@ -133,11 +133,10 @@ return packer.startup(function(use)
 			require("trouble").setup({})
 		end,
 	})
-
+	use("samodostal/image.nvim")
 	use("luzhlon/x.vim")
 	use("luzhlon/qrun.vim")
 	use("luzhlon/xmake.vim")
-
 	use("djoshea/vim-autoread")
 	if packer_bootstrap then
 		require("packer").sync()
