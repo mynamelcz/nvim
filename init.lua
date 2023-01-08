@@ -34,8 +34,6 @@ require("plugins.lualine")
 require("plugins.bufferline")
 -- 文件搜索
 require("plugins.telescope")
--- 代码高亮
-require("plugins.treesitter")
 -- 自动补全
 require("plugins.lsp.nvim-cmp")
 -- LSP
