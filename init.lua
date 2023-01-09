@@ -8,8 +8,6 @@ require("core.options")
 require("core.keymaps")
 -- 启动界面
 require("plugins.alpha")
--- Project
--- require("plugins.project")
 -- 终端
 require("plugins.toggleterm")
 -- 弹窗提示
@@ -28,7 +26,6 @@ require("plugins.flit")
 require("plugins.leap")
 -- 文件浏览
 require("plugins.nvim-tree")
-require("plugins.image")
 -- 状态栏
 require("plugins.lualine")
 require("plugins.bufferline")
@@ -36,6 +33,10 @@ require("plugins.bufferline")
 require("plugins.telescope")
 -- 自动补全
 require("plugins.lsp.nvim-cmp")
+
+-- Project
+-- require("plugins.project")
+
 -- LSP
 require("plugins.lsp.mason")
 require("plugins.lsp.lspconfig")

@@ -37,7 +37,19 @@ nvimtree.setup({
 			-- 只用内置快捷键
 			-- custom_only = true,
 			list = {
-				{ key = "u", action = "dir_up" },
+				{ key = "u", action = "dir_up" }, -- 上级目录
+				{ key = "U", action = "cd" }, --
+				{ key = "p", action = "paste" }, -- 粘贴
+				{ key = "a", action = "create" }, -- 新建文件/文件夹
+				{ key = "d", action = "remove" }, -- 删除
+				{ key = "r", action = "rename" }, -- 重命名
+				{ key = "x", action = "cut" }, -- 剪切
+				{ key = "c", action = "copy" }, -- 复制文件
+				{ key = "p", action = "paste" }, -- 粘贴
+				{ key = "y", action = "copy_name" }, -- 复制文件名
+				{ key = "Y", action = "copy_path" }, -- 复制相对路径
+				{ key = "gy", action = "copy_absolute_path" }, -- 复制绝对路径
+				{ key = "<C-k>", action = "toggle_file_info" },
 			},
 		},
 		-- 不显示行数
@@ -63,7 +75,6 @@ nvimtree.setup({
 	-- 	-- cmd = "wsl-open",
 	-- },
 })
-
 -- -- 列表快捷键
 -- pluginKeys.nvimTreeList = { -- 打开文件或文件夹
 --   { key = { '<CR>', 'o', '<2-LeftMouse>' }, action = 'edit' },
