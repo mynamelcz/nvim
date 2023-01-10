@@ -118,7 +118,8 @@ keymap("n", "<leader>fs", ":Telescope live_grep<cr>", opts) -- 正则查找
 keymap("n", "<leader>fc", ":Telescope grep_string<cr>", opts)
 keymap("n", "<leader>fh", ":Telescope help_tags<cr>", opts)
 keymap("n", "<leader>fr", ":Telescope oldfiles<cr>", opts)
-keymap("n", "<leader>fp", ":Telescope projects<cr>", opts)
+keymap("n", "<leader>fp", ":Telescope persisted<cr>", opts)
+
 --[[插件名: tagbar ]]
 keymap("n", "tl", ":Tagbar<cr>", opts)
 

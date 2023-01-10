@@ -67,7 +67,7 @@ dashboard.section.buttons.val = {
 	-- dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
 
 	dashboard.button("1", "  Recently opened files", ":Telescope oldfiles <CR>"),
-	dashboard.button("2", "  Projects", ":Telescope projects <CR>"),
+	dashboard.button("2", "  Projects", ":Telescope persisted<CR>"),
 	dashboard.button("3", "  Find File", ":Telescope find_files <CR>"),
 	dashboard.button("4", "  Find Word", ":Telescope live_grep <CR>"),
 	dashboard.button("5", "  Edit init", ":edit " .. nvim_path .. "/init.lua <CR>"),

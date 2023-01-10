@@ -34,9 +34,6 @@ require("plugins.telescope")
 -- 自动补全
 require("plugins.lsp.nvim-cmp")
 
--- Project
--- require("plugins.project")
-
 -- LSP
 require("plugins.lsp.mason")
 require("plugins.lsp.lspconfig")

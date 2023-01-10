@@ -80,6 +80,14 @@ return packer.startup(function(use)
 	})
 	---------------- project管理 --------------
 	use("ahmedkhalf/project.nvim")
+	use({
+		"olimorris/persisted.nvim",
+		--module = "persisted", -- For lazy loading
+		config = function()
+			require("persisted").setup()
+			require("telescope").load_extension("persisted") -- To load the telescope extension
+		end,
+	})
 	---------------- 语法高亮 -----------------
 	use("nvim-treesitter/nvim-treesitter")
 	---------------- 彩色括号 -----------------

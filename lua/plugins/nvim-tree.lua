@@ -15,7 +15,7 @@ nvimtree.setup({
 	},
 	update_cwd = true,
 	update_focused_file = {
-		enable = true,
+		enable = false,
 		update_cwd = true,
 	},
 	filters = {
