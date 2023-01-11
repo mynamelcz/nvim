@@ -33,7 +33,8 @@ require("plugins.bufferline")
 require("plugins.telescope")
 -- 自动补全
 require("plugins.lsp.nvim-cmp")
-
+-- 会话管理
+require("plugins.persisted")
 -- LSP
 require("plugins.lsp.mason")
 require("plugins.lsp.lspconfig")

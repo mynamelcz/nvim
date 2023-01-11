@@ -123,6 +123,19 @@ keymap("n", "<leader>fp", ":Telescope persisted<cr>", opts)
 --[[插件名: tagbar ]]
 keymap("n", "tl", ":Tagbar<cr>", opts)
 
+--[[插件名: persisted 会话管理
+<CR> - Source the session file  -- telescope
+<C-d> - Delete the session file -- telescope
+:SessionToggle - Determines whether to load, start or stop a session
+:SessionStart - Start recording a session. Useful if autosave = false
+:SessionStop - Stop recording a session
+:SessionSave - Save the current session
+:SessionLoad - Load the session for the current directory and current branch if git_use_branch = true
+:SessionLoadLast - Load the last session
+:SessionDelete - Delete the current session
+Note: The author only binds :SessionToggle to a keymap for simplicity.
+--]]
+
 --[[插件名: lf ]]
 vim.g.lf_map_keys = 0
 --[[    插件名:nvim-surround

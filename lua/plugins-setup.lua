@@ -45,8 +45,6 @@ return packer.startup(function(use)
 	use("szw/vim-maximizer")
 	--------------------- 主题设置 --------------------
 	use("sainnhe/everforest")
-	-- tokyonight
-	use("folke/tokyonight.nvim")
 	-- gruvbox
 	use("ellisonleao/gruvbox.nvim")
 	-- nightfox
@@ -79,15 +77,7 @@ return packer.startup(function(use)
 		ft = "markdown",
 	})
 	---------------- project管理 --------------
-	use("ahmedkhalf/project.nvim")
-	use({
-		"olimorris/persisted.nvim",
-		--module = "persisted", -- For lazy loading
-		config = function()
-			require("persisted").setup()
-			require("telescope").load_extension("persisted") -- To load the telescope extension
-		end,
-	})
+	use("olimorris/persisted.nvim")
 	---------------- 语法高亮 -----------------
 	use("nvim-treesitter/nvim-treesitter")
 	---------------- 彩色括号 -----------------
