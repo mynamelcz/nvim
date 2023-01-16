@@ -58,7 +58,6 @@ telescope.setup({
 			},
 		},
 	},
-
 	pickers = {
 		find_files = {
 			--theme = "dropdown", -- 可选参数： dropdown, cursor, ivy

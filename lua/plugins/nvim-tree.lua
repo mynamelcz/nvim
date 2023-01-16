@@ -16,7 +16,7 @@ nvimtree.setup({
 	update_cwd = true,
 	update_focused_file = {
 		enable = false,
-		update_cwd = true,
+		update_cwd = false,
 	},
 	filters = {
 		-- 隐藏 .文件
@@ -75,6 +75,7 @@ nvimtree.setup({
 	-- 	-- cmd = "wsl-open",
 	-- },
 })
+
 -- -- 列表快捷键
 -- pluginKeys.nvimTreeList = { -- 打开文件或文件夹
 --   { key = { '<CR>', 'o', '<2-LeftMouse>' }, action = 'edit' },

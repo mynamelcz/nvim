@@ -42,8 +42,8 @@ keymap("n", "<C-a>", "ggVG$", opts)
 keymap("n", "x", '"_x', opts)
 
 -- 切换buff
-keymap("n", "1", ":bNext<CR>", opts)
-keymap("n", "2", ":bprevious<CR>", opts)
+keymap("n", "1", ":bprevious<CR>", opts)
+keymap("n", "2", ":bnext<CR>", opts)
 
 -- 调整窗口大小
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
@@ -119,7 +119,6 @@ keymap("n", "<leader>fc", ":Telescope grep_string<cr>", opts)
 keymap("n", "<leader>fh", ":Telescope help_tags<cr>", opts)
 keymap("n", "<leader>fr", ":Telescope oldfiles<cr>", opts)
 keymap("n", "<leader>fp", ":Telescope persisted<cr>", opts)
-
 --[[插件名: tagbar ]]
 keymap("n", "tl", ":Tagbar<cr>", opts)
 

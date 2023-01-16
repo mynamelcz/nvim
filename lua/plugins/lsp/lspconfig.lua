@@ -18,14 +18,15 @@ local on_attach = function(client, bufnr)
 
 	-- 查找所在文件
 	keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", opts) -- show definition, references
+	-- Code Actions
+	keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts) -- see available code actions
+	-- 重命名
+	keymap.set("n", "\\r", "<cmd>Lspsaga rename<CR>", opts) -- smart rename
+
 	-- 查看函数定义
 	keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts) -- see definition and make edits in window
 	-- 查看函数说明注释
 	keymap.set("n", "gk", "<cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
-	-- 重命名
-	keymap.set("n", "\\r", "<cmd>Lspsaga rename<CR>", opts) -- smart rename
-	-- Code Actions
-	keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts) -- see available code actions
 	-- 显示错误信息
 	-- keymap.set("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts) -- jump to previous diagnostic in buffer
 	-- keymap.set("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer

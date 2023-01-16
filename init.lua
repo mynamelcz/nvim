@@ -8,6 +8,8 @@ require("core.options")
 require("core.keymaps")
 -- 启动界面
 require("plugins.alpha")
+-- 会话管理
+require("plugins.persisted")
 -- 终端
 require("plugins.toggleterm")
 -- 弹窗提示
@@ -31,10 +33,10 @@ require("plugins.lualine")
 require("plugins.bufferline")
 -- 文件搜索
 require("plugins.telescope")
+-- 代码高亮
+require("plugins.treesitter")
 -- 自动补全
 require("plugins.lsp.nvim-cmp")
--- 会话管理
-require("plugins.persisted")
 -- LSP
 require("plugins.lsp.mason")
 require("plugins.lsp.lspconfig")

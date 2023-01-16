@@ -79,7 +79,7 @@ return packer.startup(function(use)
 	---------------- project管理 --------------
 	use("olimorris/persisted.nvim")
 	---------------- 语法高亮 -----------------
-	use("nvim-treesitter/nvim-treesitter")
+	use({ "nvim-treesitter/nvim-treesitter", commit = "770c66d43fa26cdf66227ed4ab66bd5fede85c21" })
 	---------------- 彩色括号 -----------------
 	use("p00f/nvim-ts-rainbow")
 	---------------- 缩进线   -----------------
@@ -107,7 +107,7 @@ return packer.startup(function(use)
 	use("williamboman/mason-lspconfig.nvim")
 	use("neovim/nvim-lspconfig")
 	use("hrsh7th/cmp-nvim-lsp")
-	use({ "glepnir/lspsaga.nvim", branch = "main" })
+	use({ "glepnir/lspsaga.nvim", commit = "b7b4777369b441341b2dcd45c738ea4167c11c9e", branch = "main" })
 	use("onsails/lspkind.nvim")
 	use("jayp0521/mason-null-ls.nvim")
 	-- 补全引擎
