@@ -1,4 +1,4 @@
---  安装插件
+-- 安装插件
 require("plugins-setup")
 -- 主题设置
 require("core.colorscheme")
@@ -23,6 +23,7 @@ require("plugins.autopairs")
 require("plugins.nvim-surround")
 -- 注释
 require("plugins.comment")
+require("plugins.todo-comment")
 -- 快速定位光标
 require("plugins.flit")
 require("plugins.leap")

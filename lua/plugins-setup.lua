@@ -76,7 +76,7 @@ return packer.startup(function(use)
 		run = "cd app && npm install",
 		ft = "markdown",
 	})
-	---------------- project管理 --------------
+	---------------- 会话管理 --------------
 	use("olimorris/persisted.nvim")
 	---------------- 语法高亮 -----------------
 	use({ "nvim-treesitter/nvim-treesitter", commit = "770c66d43fa26cdf66227ed4ab66bd5fede85c21" })
@@ -86,6 +86,10 @@ return packer.startup(function(use)
 	use("lukas-reineke/indent-blankline.nvim")
 	---------------- 注    释 -----------------
 	use("numToStr/Comment.nvim")
+
+	----------------   TODO   -----------------
+	use("folke/todo-comments.nvim")
+
 	---------------- 跳     转  -----------------
 	use("ggandor/flit.nvim")
 	use("ggandor/leap-ast.nvim")
@@ -101,7 +105,6 @@ return packer.startup(function(use)
 
 	---------------- tag 列表 --------------------
 	use("preservim/tagbar")
-
 	--------------------- LSP --------------------
 	use("williamboman/mason.nvim")
 	use("williamboman/mason-lspconfig.nvim")
@@ -131,10 +134,6 @@ return packer.startup(function(use)
 			require("trouble").setup({})
 		end,
 	})
-	use("samodostal/image.nvim")
-	use("luzhlon/x.vim")
-	use("luzhlon/qrun.vim")
-	use("luzhlon/xmake.vim")
 	use("djoshea/vim-autoread")
 	if packer_bootstrap then
 		require("packer").sync()

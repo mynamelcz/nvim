@@ -112,13 +112,30 @@ keymap("n", "<leader>m", ":MaximizerToggle<cr>", opts) -- 最大化当前窗口
 --[[插件名: nvim-tree ]]
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 --[[插件名: telescope ]]
-keymap("n", "<leader>b", ":Telescope buffers<cr>", opts)
-keymap("n", "<leader>ff", ":Telescope find_files<cr>", opts) -- 查找文件
-keymap("n", "<leader>fs", ":Telescope live_grep<cr>", opts) -- 正则查找
-keymap("n", "<leader>fc", ":Telescope grep_string<cr>", opts)
+keymap(
+	"n",
+	"<leader>ff",
+	"<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+	opts
+) -- 查找文件
+
+keymap(
+	"n",
+	"<leader>b",
+	"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+	opts
+)
+keymap(
+	"n",
+	"<leader>fr",
+	"<cmd>lua require('telescope.builtin').oldfiles(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+	opts
+)
+keymap("n", "<leader>fs", ":Telescope live_grep theme=ivy<cr>", opts) -- 正则查找
+keymap("n", "<leader>fc", ":Telescope grep_string theme=ivy<cr>", opts)
 keymap("n", "<leader>fh", ":Telescope help_tags<cr>", opts)
-keymap("n", "<leader>fr", ":Telescope oldfiles<cr>", opts)
 keymap("n", "<leader>fp", ":Telescope persisted<cr>", opts)
+
 --[[插件名: tagbar ]]
 keymap("n", "tl", ":Tagbar<cr>", opts)
 

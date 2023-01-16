@@ -66,21 +66,13 @@ dashboard.section.buttons.val = {
 	-- dashboard.button("c", "  Configuration", ":e $MYVIMRC <CR>"),
 	-- dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
 
-	dashboard.button("1", "  Recently opened files", ":Telescope oldfiles <CR>"),
-	dashboard.button("2", "  Projects", ":Telescope persisted<CR>"),
+	dashboard.button("1", "  Projects", ":Telescope persisted<CR>"),
+	dashboard.button("2", "  Recently opened files", ":Telescope oldfiles <CR>"),
 	dashboard.button("3", "  Find File", ":Telescope find_files <CR>"),
 	dashboard.button("4", "  Find Word", ":Telescope live_grep <CR>"),
 	dashboard.button("5", "  Edit init", ":edit " .. nvim_path .. "/init.lua <CR>"),
 	dashboard.button("6", "  Edit Optoion", ":edit " .. nvim_path .. "/lua/core/options.lua <CR>"),
 	dashboard.button("7", "  Edit Keymaps", ":edit " .. nvim_path .. "/lua/core/keymaps.lua <CR>"),
-
-	-- dashboard.button("Leader f r", "  Recently opened files", ":Telescope oldfiles <CR>"),
-	-- dashboard.button("Leader f p", "  Projects", ":Telescope projects <CR>"),
-	-- dashboard.button("Leader f f", "  Find File", ":Telescope find_files <CR>"),
-	-- dashboard.button("Leader f s", "  Find Word", ":Telescope live_grep <CR>"),
-	-- dashboard.button("None      ", "  Edit init", ":edit " .. nvim_path .. "/lua/init.lua <CR>"),
-	-- dashboard.button("None      ", "  Edit Optoion", ":edit " .. nvim_path .. "/lua/core/options.lua <CR>"),
-	-- dashboard.button("None      ", "  Edit Keymaps", ":edit " .. nvim_path .. "/lua/core/keymaps.lua <CR>"),
 }
 
 dashboard.section.footer.opts.hl = "Type"

@@ -58,22 +58,13 @@ telescope.setup({
 			},
 		},
 	},
-	pickers = {
-		find_files = {
-			--theme = "dropdown", -- 可选参数： dropdown, cursor, ivy
-			preview = true,
-		},
-		-- live_grep = {
-		-- 	theme = "ivy",
-		-- 	preview = true,
-		-- },
-	},
+	pickers = {},
 	extensions = {
-		["ui-select"] = {
-			require("telescope.themes").get_dropdown({
-				-- even more opts
-			}),
-		},
+		-- ["ui-select"] = {
+		-- 	require("telescope.themes").get_dropdown({
+		-- 		-- even more opts
+		-- 	}),
+		-- },
 	},
 })
 
