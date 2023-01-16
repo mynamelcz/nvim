@@ -29,7 +29,7 @@ keymap("n", "<Right>", "<Nop>", opts)
 -- 切换窗口
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-k>h", opts)
+keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 -- 终端模式下 切换窗口
 keymap("t", "<C-h>", "<Cmd> wincmd h<cr>", opts)
