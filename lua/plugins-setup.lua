@@ -90,6 +90,8 @@ return packer.startup(function(use)
 	----------------   TODO   -----------------
 	use("folke/todo-comments.nvim")
 
+	---------------- GIT 提示  -----------------
+	use("lewis6991/gitsigns.nvim") -- 左则git提示
 	---------------- 跳     转  -----------------
 	use("ggandor/flit.nvim")
 	use("ggandor/leap-ast.nvim")

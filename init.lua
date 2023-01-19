@@ -36,6 +36,8 @@ require("plugins.bufferline")
 require("plugins.telescope")
 -- 代码高亮
 require("plugins.treesitter")
+-- GIT 状态显示
+require("plugins.gitsigns")
 -- 自动补全
 require("plugins.lsp.nvim-cmp")
 -- LSP

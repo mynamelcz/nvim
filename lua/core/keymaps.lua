@@ -13,9 +13,6 @@ local keymap = vim.api.nvim_set_keymap
 keymap("n", "<Space>", "", opts)
 vim.g.mapleader = " "
 
--- keymap("n", "j", "v:count == 0 ? 'gj' : 'j'", opts)
--- keymap("n", "k", "v:count == 0 ? 'gk' : 'k'", opts)
-
 -- magic search
 keymap("n", "/", "/\\v", opts)
 keymap("v", "/", "/\\v", opts)
@@ -62,9 +59,6 @@ keymap("n", "J", "5j", opts)
 keymap("n", "K", "5k", opts)
 keymap("n", "H", "^", opts)
 keymap("n", "L", "$", opts)
-
--- 输入TAB 会导致浏览代码前进后退有问题
--- keymap("n", "<Tab>", "i<Tab><Esc>l", opts)
 
 keymap("i", "jj", "<ESC>", opts) -- 退出insert模式
 
@@ -152,8 +146,6 @@ keymap("n", "tl", ":Tagbar<cr>", opts)
 Note: The author only binds :SessionToggle to a keymap for simplicity.
 --]]
 
---[[插件名: lf ]]
-vim.g.lf_map_keys = 0
 --[[    插件名:nvim-surround
     Old text                    Command         New text
 --------------------------------------------------------------------------------
