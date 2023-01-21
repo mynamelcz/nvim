@@ -12,6 +12,8 @@ require("plugins.alpha")
 require("plugins.persisted")
 -- 终端
 require("plugins.toggleterm")
+-- 命令行
+require("plugins.noice")
 -- 弹窗提示
 require("plugins.nvim-notify")
 -- 缩进线
