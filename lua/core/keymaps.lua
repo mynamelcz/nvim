@@ -105,6 +105,7 @@ keymap("n", "<leader>a", ":Alpha<cr>", opts)
 keymap("n", "<leader>m", ":MaximizerToggle<cr>", opts) -- 最大化当前窗口
 --[[插件名: nvim-tree ]]
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+
 --[[插件名: telescope ]]
 keymap(
 	"n",
@@ -129,6 +130,11 @@ keymap("n", "<leader>fs", ":Telescope live_grep theme=ivy<cr>", opts) -- 正则�
 keymap("n", "<leader>fc", ":Telescope grep_string theme=ivy<cr>", opts)
 keymap("n", "<leader>fh", ":Telescope help_tags<cr>", opts)
 keymap("n", "<leader>fp", ":Telescope persisted<cr>", opts)
+-- telescope git commands
+keymap("n", "<leader>gc", "<cmd>Telescope git_commits<cr>", opts) -- list all git commits (use <cr> to checkout) ["gc" for git commits]
+keymap("n", "<leader>gfc", "<cmd>Telescope git_bcommits<cr>", opts) -- list git commits for current file/buffer (use <cr> to checkout) ["gfc" for git file commits]
+keymap("n", "<leader>gb", "<cmd>Telescope git_branches<cr>", opts) -- list git branches (use <cr> to checkout) ["gb" for git branch]
+keymap("n", "<leader>gs", "<cmd>Telescope git_status<cr>", opts) -- list current changes per file with diff preview ["gs" for git status]
 
 --[[插件名: tagbar ]]
 keymap("n", "tl", ":Tagbar<cr>", opts)

@@ -1,5 +1,5 @@
 
-let s:fontsize = 18
+let s:fontsize = 14
 " Set Editor Font
 if exists(':GuiFont')
     " Use GuiFont! to ignore font errors
