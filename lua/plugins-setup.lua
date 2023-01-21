@@ -57,10 +57,11 @@ lazy.setup({
 	---------------- markdown预览 -------------
 	{
 		"iamcco/markdown-preview.nvim",
-		run = "cd app && npm install",
-		ft = "markdown",
+		build = "cd app && npm install",
+		ft = { "markdown" },
+		commit = "02cc3874738bc0f86e4b91f09b8a0ac88aef8e96",
 	},
-	------------------------------------------
+	--------------- 命   令   行 --------------
 	{
 		"folke/noice.nvim",
 		dependencies = {

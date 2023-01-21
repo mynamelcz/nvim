@@ -46,7 +46,7 @@ opt.swapfile = false -- 是否开启交换文件
 opt.writebackup = false
 opt.pumheight = 15 -- 补全最多显示15行
 -- opt.cmdheight = 0 -- 不输入命令时隐藏命令行
-opt.lazyredraw = true -- lazily redraw screen
+-- opt.lazyredraw = true -- lazily redraw screen
 
 -- -- jkhl 移动时光标周围保留8行
 -- -- vim.o.scrolloff = 8

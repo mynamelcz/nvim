@@ -48,6 +48,8 @@ require("plugins.lsp.lspconfig")
 require("plugins.lsp.formatter")
 require("plugins.lsp.ui")
 
+-- markdown
+require("plugins.markdown-preview")
 -- 自动命令
 require("core.autocmd")
 require("core.cscope")
