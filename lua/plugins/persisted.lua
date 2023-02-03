@@ -21,9 +21,12 @@ persisted.setup({
 	before_save = nil, -- function to run before the session is saved to disk
 	after_save = nil, -- function to run after the session is saved to disk
 	after_source = nil, -- function to run after the session is sourced
-	telescope = { -- options for the telescope extension
-		before_source = nil, -- function to run before the session is sourced via telescope
-		after_source = nil, -- function to run after the session is sourced via telescope
+	telescope = {
+		before_source = function()
+			-- Close all open buffers
+			vim.api.nvim_input("<ESC>:%bd<CR>")
+		end,
+		after_source = nil,
 		reset_prompt_after_deletion = true, -- whether to reset prompt after session deleted
 	},
 })

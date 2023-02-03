@@ -105,7 +105,8 @@ keymap("n", "<leader>a", ":Alpha<cr>", opts)
 keymap("n", "<leader>m", ":MaximizerToggle<cr>", opts) -- 最大化当前窗口
 --[[插件名: nvim-tree ]]
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
-
+--[[插件名:  BufOnly]]
+keymap("n", "<leader>x", ":BufOnly<cr>", opts)
 --[[插件名: telescope ]]
 keymap(
 	"n",
