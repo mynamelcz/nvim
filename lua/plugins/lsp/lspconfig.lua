@@ -89,3 +89,12 @@ lspconfig["pyright"].setup({
 	on_attach = on_attach,
 	single_file_support = true,
 })
+
+lspconfig["rust_analyzer"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	single_file_support = true,
+	settings = {
+		["rust-analyzer"] = {},
+	},
+})

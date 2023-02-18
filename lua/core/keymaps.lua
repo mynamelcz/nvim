@@ -39,8 +39,8 @@ keymap("n", "<C-a>", "ggVG$", opts)
 keymap("n", "x", '"_x', opts)
 
 -- 切换buff
-keymap("n", "1", ":bprevious<CR>", opts)
-keymap("n", "2", ":bnext<CR>", opts)
+keymap("n", "<A-h>", ":bprevious<CR>", opts)
+keymap("n", "<A-l>", ":bnext<CR>", opts)
 
 -- 调整窗口大小
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)

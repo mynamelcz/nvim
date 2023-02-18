@@ -34,6 +34,7 @@ lazy.setup({
 	"ellisonleao/gruvbox.nvim",
 	"EdenEast/nightfox.nvim",
 	"Mofiqul/vscode.nvim",
+	"folke/tokyonight.nvim",
 	------------------ 文件浏览 -----------------
 	"nvim-tree/nvim-tree.lua",
 	------------------ 文件图标 -----------------
@@ -131,5 +132,8 @@ lazy.setup({
 			require("trouble").setup({})
 		end,
 	},
+	---------------- 自动更新文件 -----------------
 	"djoshea/vim-autoread",
+	---------------- 数据递增  -----------------
+	"triglav/vim-visual-increment",
 })
