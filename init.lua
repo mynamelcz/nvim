@@ -34,6 +34,8 @@ require("plugins.nvim-tree")
 -- 状态栏
 require("plugins.lualine")
 require("plugins.bufferline")
+-- 搜索替换
+require("plugins.nvim-spectre")
 -- 文件搜索
 require("plugins.telescope")
 -- 代码高亮
@@ -47,7 +49,6 @@ require("plugins.lsp.mason")
 require("plugins.lsp.lspconfig")
 require("plugins.lsp.formatter")
 require("plugins.lsp.ui")
-
 -- markdown
 require("plugins.markdown-preview")
 -- 自动命令

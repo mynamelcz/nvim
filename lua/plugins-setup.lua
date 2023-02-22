@@ -31,7 +31,6 @@ lazy.setup({
 	"szw/vim-maximizer",
 	--------------------- 主题设置 --------------------
 	"sainnhe/everforest",
-	"ellisonleao/gruvbox.nvim",
 	"EdenEast/nightfox.nvim",
 	"Mofiqul/vscode.nvim",
 	"folke/tokyonight.nvim",
@@ -42,6 +41,9 @@ lazy.setup({
 	------------------上下状态栏 ----------------
 	"akinsho/bufferline.nvim",
 	"nvim-lualine/lualine.nvim",
+
+	------------------搜索替换   ----------------
+	"windwp/nvim-spectre",
 	------------------ 搜索弹窗 ----------------
 	{
 		"nvim-telescope/telescope.nvim",
