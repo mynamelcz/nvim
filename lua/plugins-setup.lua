@@ -41,9 +41,10 @@ lazy.setup({
 	------------------上下状态栏 ----------------
 	"akinsho/bufferline.nvim",
 	"nvim-lualine/lualine.nvim",
-
 	------------------搜索替换   ----------------
 	"windwp/nvim-spectre",
+	------------------ 多光标  ---------------
+	"mg979/vim-visual-multi",
 	------------------ 搜索弹窗 ----------------
 	{
 		"nvim-telescope/telescope.nvim",
