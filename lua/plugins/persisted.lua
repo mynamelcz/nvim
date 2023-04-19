@@ -22,11 +22,16 @@ persisted.setup({
 	after_save = nil, -- function to run after the session is saved to disk
 	after_source = nil, -- function to run after the session is sourced
 	telescope = {
-		before_source = function()
-			-- Close all open buffers
-			vim.api.nvim_input("<ESC>:%bd<CR>")
-		end,
-		after_source = nil,
 		reset_prompt_after_deletion = true, -- whether to reset prompt after session deleted
 	},
+})
+
+local group = vim.api.nvim_create_augroup("PersistedHooks", {})
+
+vim.api.nvim_create_autocmd({ "User" }, {
+	pattern = "PersistedTelescopeLoadPre",
+	group = group,
+	callback = function()
+		vim.api.nvim_input("<ESC>:%bd<CR>")
+	end,
 })
