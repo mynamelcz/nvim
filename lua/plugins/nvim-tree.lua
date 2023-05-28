@@ -24,6 +24,7 @@ nvimtree.setup({
 		-- 隐藏 node_modules 文件夹
 		-- custom = { "node_modules" },
 	},
+	on_attach = "default",
 	view = {
 		-- 宽度
 		-- width = 40,
@@ -33,7 +34,6 @@ nvimtree.setup({
 		side = "left",
 		-- 是否隐藏根目录
 		hide_root_folder = false,
-		on_attach = "default",
 		-- 不显示行数
 		number = false,
 		relativenumber = false,

@@ -63,36 +63,80 @@ if not saga_status then
 	return
 end
 
-lspsaga.init_lsp_saga({
-	-- keybinds for navigation in lspsaga window
-	move_in_saga = { prev = "<C-k>", next = "<C-j>" },
-	-- use enter to open file with finder
-	finder_action_keys = {
-		open = "<CR>",
+-- lspsaga.init_lsp_saga({
+-- 	-- keybinds for navigation in lspsaga window
+-- 	move_in_saga = { prev = "<C-k>", next = "<C-j>" },
+-- 	-- use enter to open file with finder
+-- 	finder_action_keys = {
+-- 		open = "<CR>",
+-- 	},
+-- 	-- use enter to open file with definition preview
+-- 	definition_action_keys = {
+-- 		edit = "<CR>",
+-- 	},
+-- })
+lspsaga.setup({
+	finder = {
+		max_height = 0.5,
+		min_width = 30,
+		force_max_height = false,
+		keys = {
+			jump_to = "p",
+			expand_or_jump = "o",
+			vsplit = "s",
+			split = "i",
+			tabe = "t",
+			tabnew = "r",
+			quit = { "q", "<ESC>" },
+			close_in_preview = "<ESC>",
+		},
 	},
-	-- use enter to open file with definition preview
-	definition_action_keys = {
-		edit = "<CR>",
+	definition = {
+		edit = "<C-c>o",
+		vsplit = "<C-c>v",
+		split = "<C-c>i",
+		tabe = "<C-c>t",
+		quit = "q",
+	},
+	rename = {
+		quit = "<ESC>",
+		exec = "<CR>",
+		mark = "x",
+		confirm = "<CR>",
+		in_select = true,
+	},
+	beacon = {
+		enable = true,
+		frequency = 7,
+	},
+	symbol_in_winbar = {
+		enable = false,
+		separator = " ",
+		ignore_patterns = {},
+		hide_keyword = true,
+		show_file = true,
+		folder_level = 2,
+		respect_root = false,
+		color_mode = true,
 	},
 })
-
 
 local M = {}
 -- 为 cmp.lua 提供参数格式
 M.formatting = {
-    format = lspkind.cmp_format({
-        mode = "symbol_text",
-        --mode = 'symbol', -- show only symbol annotations
+	format = lspkind.cmp_format({
+		mode = "symbol_text",
+		--mode = 'symbol', -- show only symbol annotations
 
-        maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
-        -- The function below will be called before any actual modifications from lspkind
-        -- so that you can provide more controls on popup customization. (See [#30](https://github.com/onsails/lspkind-nvim/pull/30))
-        before = function(entry, vim_item)
-            -- Source 显示提示来源
-            vim_item.menu = "[" .. string.upper(entry.source.name) .. "]"
-            return vim_item
-        end,
-    }),
+		maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
+		-- The function below will be called before any actual modifications from lspkind
+		-- so that you can provide more controls on popup customization. (See [#30](https://github.com/onsails/lspkind-nvim/pull/30))
+		before = function(entry, vim_item)
+			-- Source 显示提示来源
+			vim_item.menu = "[" .. string.upper(entry.source.name) .. "]"
+			return vim_item
+		end,
+	}),
 }
 
 return M

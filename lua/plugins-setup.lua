@@ -79,8 +79,7 @@ lazy.setup({
 	"olimorris/persisted.nvim",
 	---------------- 语法高亮 -----------------
 	-- { "nvim-treesitter/nvim-treesitter", commit = "770c66d43fa26cdf66227ed4ab66bd5fede85c21" },
-	{ "nvim-treesitter/nvim-treesitter", commit = "32d0baae44f5fd0416128c871fca6d9e27b60b3d" },
-	-- "nvim-treesitter/nvim-treesitter",
+	"nvim-treesitter/nvim-treesitter",
 	---------------- 彩色括号 -----------------
 	"p00f/nvim-ts-rainbow",
 	---------------- 缩进线   -----------------
@@ -113,7 +112,8 @@ lazy.setup({
 	"williamboman/mason-lspconfig.nvim",
 	"neovim/nvim-lspconfig",
 	"hrsh7th/cmp-nvim-lsp",
-	{ "glepnir/lspsaga.nvim", commit = "b7b4777369b441341b2dcd45c738ea4167c11c9e", branch = "main" },
+	-- { "glepnir/lspsaga.nvim", commit = "b7b4777369b441341b2dcd45c738ea4167c11c9e", branch = "main" },
+	{ "glepnir/lspsaga.nvim",    event = "LspAttach"},
 	"onsails/lspkind.nvim",
 	"jayp0521/mason-null-ls.nvim",
 	-- 补全引擎

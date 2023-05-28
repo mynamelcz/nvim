@@ -24,7 +24,8 @@ local on_attach = function(client, bufnr)
 	keymap.set("n", "\\r", "<cmd>Lspsaga rename<CR>", opts) -- smart rename
 
 	-- 查看函数定义
-	keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts) -- see definition and make edits in window
+	keymap.set("n", "ge", "<cmd>Lspsaga peek_definition<CR>", opts) -- see definition and make edits in window
+	keymap.set("n", "gd", "<cmd>Lspsaga goto_definition<CR>", opts) -- see definition and make edits in window
 	-- 查看函数说明注释
 	keymap.set("n", "gk", "<cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
 	-- 显示错误信息
