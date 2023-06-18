@@ -6,7 +6,7 @@ end
 treesitter.setup({
 	ensure_installed = {
 		"c",
-		-- "cpp",
+		"cpp",
 		"python",
 		"cmake",
 		"make",
