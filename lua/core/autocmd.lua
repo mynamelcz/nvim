@@ -33,3 +33,29 @@ autocmd("BufWritePost", {
 	group = myAutoGroup,
 	command = "FormatWrite",
 })
+--- 重新打开缓冲区恢复光标位置
+autocmd("BufReadPost", {
+	pattern = "*",
+	callback = function()
+		if vim.fn.line("'\"") > 0 and vim.fn.line("'\"") <= vim.fn.line("$") then
+			vim.fn.setpos(".", vim.fn.getpos("'\""))
+			vim.cmd("silent! foldopen")
+		end
+	end,
+})
+
+--- 运行当前python文件
+autocmd("FileType", {
+	pattern = "python",
+	callback = function()
+		local file_name = vim.fn.bufname()
+		vim.api.nvim_buf_set_keymap(
+			0,
+			"n",
+			"<F7>",
+			":w<CR>:ToggleTerm<CR>python " .. file_name .. "<CR>",
+			-- ":w<CR>:split<CR>:te time pyfile %<CR>",
+			{ silent = true, noremap = true }
+		)
+	end,
+})
