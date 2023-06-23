@@ -31,6 +31,8 @@ require("plugins.flit")
 require("plugins.leap")
 -- 文件浏览
 require("plugins.nvim-tree")
+-- 文件类型图标
+-- require("plugins.nvim-web-devicons")
 -- 状态栏
 require("plugins.lualine")
 require("plugins.bufferline")

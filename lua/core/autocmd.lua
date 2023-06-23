@@ -53,7 +53,7 @@ autocmd("FileType", {
 			0,
 			"n",
 			"<F7>",
-			":w<CR>:ToggleTerm<CR>python " .. file_name .. "<CR>",
+			":w<CR>:ToggleTerm<CR>cls<CR>python " .. file_name .. "<CR>",
 			-- ":w<CR>:split<CR>:te time pyfile %<CR>",
 			{ silent = true, noremap = true }
 		)
