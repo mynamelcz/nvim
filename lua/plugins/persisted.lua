@@ -5,7 +5,6 @@ if not status then
 end
 
 require("telescope").load_extension("persisted") -- To load the telescope extension
-
 persisted.setup({
 	save_dir = vim.fn.expand(vim.fn.stdpath("data") .. "/sessions/"), -- directory where session files are saved
 	command = "VimLeavePre", -- the autocommand for which the session is saved
@@ -25,9 +24,7 @@ persisted.setup({
 		reset_prompt_after_deletion = true, -- whether to reset prompt after session deleted
 	},
 })
-
 local group = vim.api.nvim_create_augroup("PersistedHooks", {})
-
 vim.api.nvim_create_autocmd({ "User" }, {
 	pattern = "PersistedTelescopeLoadPre",
 	group = group,

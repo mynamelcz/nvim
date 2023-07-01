@@ -5,7 +5,6 @@ if not status then
 end
 
 local lualine_nightfly = require("lualine.themes.everforest")
-
 lualine_nightfly.command = {
 	a = {
 		gui = "bold",
@@ -16,13 +15,12 @@ lualine_nightfly.command = {
 lualine.setup({
 	options = {
 		theme = lualine_nightfly,
+		icons_enabled = true,
 	},
-
 	extensions = { "nvim-tree", "toggleterm" },
 	sections = {
 		lualine_a = { "mode" },
 		lualine_b = { "branch", "diff", "diagnostics" },
-		-- lualine_b = { "diagnostics" },
 		lualine_c = { { "filename", path = 1 } },
 		lualine_x = { "encoding", "fileformat", "filetype" },
 		lualine_y = { "progress" },

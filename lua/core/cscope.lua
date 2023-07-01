@@ -1,7 +1,7 @@
 ------------------------------------
 -- CSCOPE settings for nvim in lua
 ------------------------------------
-
+-- Neovim 好像没有cscope 命令了
 if io.open("cscope.out", "r") ~= nil then
 	-- use both cscope and ctag for 'ctrl-]', ':ta', and 'vim -t'
 	vim.opt.cscopetag = true

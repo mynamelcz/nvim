@@ -129,12 +129,7 @@ lazy.setup({
 	-- 代码格式化
 	"mhartington/formatter.nvim",
 	-- 显示错误列表
-	{
-		"folke/trouble.nvim",
-		config = function()
-			require("trouble").setup({})
-		end,
-	},
+	"folke/trouble.nvim",
 	---------------- 自动更新文件 -----------------
 	"djoshea/vim-autoread",
 	---------------- 数据递增  -----------------
