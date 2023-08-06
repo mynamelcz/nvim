@@ -12,6 +12,7 @@ lualine_nightfly.command = {
 		-- 		fg = new_colors.black, -- black
 	},
 }
+-- lualine 代码诊断图标显示有问题(显示为 口 )，直接去lualine源码定义图标的位置修改
 lualine.setup({
 	options = {
 		theme = lualine_nightfly,

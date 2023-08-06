@@ -78,7 +78,10 @@ lazy.setup({
 	---------------- 会话管理 --------------
 	"olimorris/persisted.nvim",
 	---------------- 语法高亮 -----------------
-	"nvim-treesitter/nvim-treesitter",
+	{
+		"nvim-treesitter/nvim-treesitter",
+		commit = "74a7da4e4be5ee71e9efb6d7bdffa16ad620cc57",
+	},
 	---------------- 彩色括号 -----------------
 	"p00f/nvim-ts-rainbow",
 	---------------- 缩进线   -----------------
@@ -92,10 +95,54 @@ lazy.setup({
 	---------------- GIT 提示  -----------------
 	"lewis6991/gitsigns.nvim", -- 左则git提示
 	---------------- 跳     转  -----------------
-	"ggandor/flit.nvim",
-	"ggandor/leap-ast.nvim",
-	"ggandor/leap-spooky.nvim",
-	"ggandor/leap.nvim",
+	{
+		"folke/flash.nvim",
+		event = "VeryLazy",
+		--@type Flash.Config
+		opts = {},
+		keys = {
+			{
+				"s",
+				mode = { "n", "x", "o" },
+				function()
+					require("flash").jump()
+				end,
+				desc = "Flash",
+			},
+			{
+				"S",
+				mode = { "n", "o", "x" },
+				function()
+					require("flash").treesitter()
+				end,
+				desc = "Flash Treesitter",
+			},
+			{
+				"r",
+				mode = "o",
+				function()
+					require("flash").remote()
+				end,
+				desc = "Remote Flash",
+			},
+			{
+				"R",
+				mode = { "o", "x" },
+				function()
+					require("flash").treesitter_search()
+				end,
+				desc = "Treesitter Search",
+			},
+			{
+				"<c-s>",
+				mode = { "c" },
+				function()
+					require("flash").toggle()
+				end,
+				desc = "Toggle Flash Search",
+			},
+		},
+	},
 	---------------- 括号补全 -----------------
 	"windwp/nvim-autopairs",
 	"kylechui/nvim-surround",
@@ -111,6 +158,7 @@ lazy.setup({
 	"williamboman/mason-lspconfig.nvim",
 	"neovim/nvim-lspconfig",
 	"hrsh7th/cmp-nvim-lsp",
+	-- "nvimdev/lspsaga.nvim",
 	{ "glepnir/lspsaga.nvim", event = "LspAttach" },
 	"onsails/lspkind.nvim",
 	"jayp0521/mason-null-ls.nvim",

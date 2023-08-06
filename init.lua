@@ -27,8 +27,8 @@ require("plugins.nvim-surround")
 require("plugins.comment")
 require("plugins.todo-comment")
 -- 快速定位光标
-require("plugins.flit")
-require("plugins.leap")
+-- require("plugins.flit")
+-- require("plugins.leap")
 -- 文件浏览
 require("plugins.nvim-tree")
 -- 文件类型图标
