@@ -1,12 +1,12 @@
 local opt = vim.opt
 -- 设置python路径
-vim.g.python3_host_prog = "C:/Python311/python"
+-- vim.g.python3_host_prog = "C:/Python311/python"
 -- vim.g.python3_host_prog = "F:/Python39/python"
 -- vim.g.python3_host_prog = "F:/ProgramData/Anaconda3/python"
 -- vim.g.loaded_node_provider = 0
 -- 编码
 opt.encoding = "utf-8"
-opt.fileencoding = "utf-8"
+-- opt.fileencoding = "utf-8"
 
 -- 行号
 opt.number = true

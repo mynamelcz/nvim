@@ -4,7 +4,13 @@ vim.diagnostic.config({
 	signs = true,
 	update_in_insert = false,
 })
-local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+local signs = {
+
+	Error = "",
+	Warn = "",
+	Hint = "",
+	Infor = "",
+}
 for type, icon in pairs(signs) do
 	local hl = "DiagnosticSign" .. type
 	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
@@ -13,67 +19,69 @@ end
 -- lspkind
 local lspkind = require("lspkind")
 lspkind.init({
-	-- default = true,
+	-- DEPRECATED (use mode instead): enables text annotations
+	--
+	-- default: true
 	-- with_text = true,
+
 	-- defines how annotations are shown
 	-- default: symbol
 	-- options: 'text', 'text_symbol', 'symbol_text', 'symbol'
 	mode = "symbol_text",
+
 	-- default symbol map
 	-- can be either 'default' (requires nerd-fonts font) or
 	-- 'codicons' for codicon preset (requires vscode-codicons font)
 	--
 	-- default: 'default'
 	preset = "codicons",
+
 	-- override preset symbols
 	--
 	-- default: {}
 	symbol_map = {
-		Text = "",
-		Method = "",
-		Function = "",
-		Constructor = "",
-		Field = "ﰠ",
-		Variable = "",
-		Class = "ﴯ",
-		Interface = "",
-		Module = "",
-		Property = "ﰠ",
-		Unit = "塞",
-		Value = "",
-		Enum = "",
-		Keyword = "",
-		Snippet = "",
-		Color = "",
-		File = "",
-		Reference = "",
-		Folder = "",
-		EnumMember = "",
-		Constant = "",
-		Struct = "פּ",
-		Event = "",
-		Operator = "",
-		TypeParameter = "",
+		Array = " ",
+		Boolean = " ",
+		Class = " ",
+		Color = " ",
+		Constant = " ",
+		Constructor = " ",
+		Enum = " ",
+		EnumMember = " ",
+		Event = " ",
+		Field = " ",
+		File = " ",
+		Folder = " ",
+		Function = " ",
+		Interface = " ",
+		Key = " ",
+		Keyword = " ",
+		Method = " ",
+		Module = " ",
+		Namespace = " ",
+		Null = " ",
+		Number = " ",
+		Object = " ",
+		Operator = " ",
+		Package = " ",
+		Property = " ",
+		Reference = "  ",
+		Snippet = " ",
+		String = " ",
+		Struct = " ",
+		Text = " ",
+		TypeParameter = " ",
+		Unit = " ",
+		Value = " ",
+		Variable = " ",
 	},
 })
-
 -- import lspsaga safely
 local saga_status, lspsaga = pcall(require, "lspsaga")
 if not saga_status then
 	return
 end
 lspsaga.setup({
-	ui = {
-		-- lspsaga 有一些默认的图标乱码，在这里修改
-		kind = {
-			["Function"] = { " ", "Function" },
-			["String"] = { "", "String" },
-			["Text"] = { "", "String" },
-			["Number"] = { "", "Number" },
-			["Null"] = { "NULL ", "Constant" },
-			["Array"] = { "[]", "Type" },
-		},
-	},
 	finder = {
 		max_height = 0.5,
 		min_width = 30,

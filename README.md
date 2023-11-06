@@ -1,17 +1,17 @@
-# nvim
-    nvim-config
+# NVIM
+    NVIM-CONF
 
-	'moll/vim-bbye",
-	--------------------- 基本api  ------------------
-	'nvim-lua/plenary.nvim',
-	--------------------- 启动时间 --------------------
-	{ 'dstein64/vim-startuptime", cmd = 'StartupTime' },
-	------------------ Buffer Only--------------------
-	{ 'numtostr/BufOnly.nvim", cmd = 'BufOnly' },
-	--------------------- 启动界面 --------------------
-	'goolord/alpha-nvim",
-	--------------------- 弹窗窗口 --------------------
-	'rcarriga/nvim-notify",
-	------------------ 最大化当前窗口 --------------------
-	'szw/vim-maximizer",
+	'moall/vim-bbye",
+	---a------------------ 基本api  ------------------
+	'NVaIM-lua/plenary.NVIM',
+	---a------------------ 启动时间 --------------------
+	{ 'adstein64/vim-startuptime", cmd = 'StartupTime' },
+	---a--------------- Buffer Only--------------------
+	{ 'anumtostr/BufOnly.NVIM", cmd = 'BufOnly' },
+	---a------------------ 启动界面 --------------------
+	'goaolord/alpha-NVIM",
+	---a------------------ 弹窗窗口 --------------------
+	'rcaarriga/NVIM-notify",
+	---a--------------- 最大化当前窗口 --------------------
+	'szaw/vim-maximizer",
 

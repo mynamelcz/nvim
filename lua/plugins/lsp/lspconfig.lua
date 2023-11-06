@@ -14,9 +14,10 @@ local keymap = vim.keymap -- for conciseness
 local on_attach = function(client, bufnr)
 	-- keybind options
 	local opts = { noremap = true, silent = false, buffer = bufnr }
-
-	-- 查找所在文件
-	keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", opts) -- show definition, references
+	-- 浮动终端
+	-- keymap.set("n", "t", "<c->", "<cmd>Lspsaga term_toggle")
+	-- finder
+	keymap.set("n", "gf", "<cmd>Lspsaga finder<CR>", opts) -- show definition, references
 	-- Code Actions
 	keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts) -- see available code actions
 	-- 重命名

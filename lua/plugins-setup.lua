@@ -85,7 +85,7 @@ lazy.setup({
 	---------------- 彩色括号 -----------------
 	"p00f/nvim-ts-rainbow",
 	---------------- 缩进线   -----------------
-	"lukas-reineke/indent-blankline.nvim",
+	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 	---------------- 注    释 -----------------
 	"numToStr/Comment.nvim",
 
@@ -158,8 +158,7 @@ lazy.setup({
 	"williamboman/mason-lspconfig.nvim",
 	"neovim/nvim-lspconfig",
 	"hrsh7th/cmp-nvim-lsp",
-	-- "nvimdev/lspsaga.nvim",
-	{ "glepnir/lspsaga.nvim", event = "LspAttach" },
+	"nvimdev/lspsaga.nvim",
 	"onsails/lspkind.nvim",
 	"jayp0521/mason-null-ls.nvim",
 	-- 补全引擎
@@ -178,6 +177,14 @@ lazy.setup({
 	"mhartington/formatter.nvim",
 	-- 显示错误列表
 	"folke/trouble.nvim",
+	{
+		"j-hui/fidget.nvim",
+		tag = "legacy",
+		event = "LspAttach",
+		opts = {
+			-- options
+		},
+	},
 	---------------- 自动更新文件 -----------------
 	"djoshea/vim-autoread",
 	---------------- 数据递增  -----------------

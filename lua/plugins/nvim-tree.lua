@@ -33,7 +33,7 @@ nvimtree.setup({
 		-- 显示的位置
 		side = "left",
 		-- 是否隐藏根目录
-		hide_root_folder = false,
+		-- hide_root_folder = false,
 		-- 不显示行数
 		number = false,
 		relativenumber = false,

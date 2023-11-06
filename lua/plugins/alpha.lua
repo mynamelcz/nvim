@@ -58,21 +58,20 @@ dashboard.section.footer.val = {
 local nvim_path = vim.fn.stdpath("config")
 dashboard.section.buttons.val = {
 
-	-- dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
-	-- dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
-	-- dashboard.button("p", "  Find project", ":Telescope projects <CR>"),
-	-- dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"),
-	-- dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
-	-- dashboard.button("c", "  Configuration", ":e $MYVIMRC <CR>"),
-	-- dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
-
+	-- button("e", "  New file", "<cmd>ene <CR>"),
+	-- button("SPC f f", "󰈞  Find file"),
+	-- button("SPC f h", "󰊄  Recently opened files"),
+	-- button("SPC f r", "  Frecency/MRU"),
+	-- button("SPC f g", "󰈬  Find word"),
+	-- button("SPC f m", "  Jump to bookmarks"),
+	-- button("SPC s l", "  Open last session"),
 	dashboard.button("1", "  Projects", ":Telescope persisted<CR>"),
-	dashboard.button("2", "  Recently opened files", ":Telescope oldfiles <CR>"),
+	dashboard.button("2", "  Recently opened files", ":Telescope oldfiles <CR>"),
 	dashboard.button("3", "  Find File", ":Telescope find_files <CR>"),
-	dashboard.button("4", "  Find Word", ":Telescope live_grep <CR>"),
+	dashboard.button("4", "󰈬  Find Word", ":Telescope live_grep <CR>"),
 	dashboard.button("5", "  Edit init", ":edit " .. nvim_path .. "/init.lua <CR>"),
 	dashboard.button("6", "  Edit Optoion", ":edit " .. nvim_path .. "/lua/core/options.lua <CR>"),
-	dashboard.button("7", "  Edit Keymaps", ":edit " .. nvim_path .. "/lua/core/keymaps.lua <CR>"),
+	dashboard.button("7", "  Edit Keymaps", ":edit " .. nvim_path .. "/lua/core/keymaps.lua <CR>"),
 }
 
 dashboard.section.footer.opts.hl = "Type"

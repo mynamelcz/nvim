@@ -141,11 +141,20 @@ keymap("n", "<leader>gs", "<cmd>Telescope git_status<cr>", opts) -- list current
 keymap("n", "tl", ":Tagbar<cr>", opts)
 
 --[[插件名: spectre ]]
--- keymap("n", "<leader>S", "<cmd>lua require('spectre').open()<CR>", opts)
-keymap("n", "<leader>sw", "<cmd>lua require('spectre').open_visual()<CR>", opts)
--- keymap("v", "<leader>s", "<esc>:lua require('spectre').open_visual()<CR>", opts)
--- "  search in current file
--- keymap("n", "<leader>sp", "viw:lua require('spectre').open_file_search()<cr>", opts)
+keymap("n", "<leader>S", '<cmd>lua require("spectre").toggle()<CR>', { desc = "Toggle Spectre" })
+keymap(
+	"n",
+	"<leader>sw",
+	'<cmd>lua require("spectre").open_visual({select_word=true})<CR>',
+	{ desc = "Search current word" }
+)
+keymap("v", "<leader>sw", '<esc><cmd>lua require("spectre").open_visual()<CR>', { desc = "Search current word" })
+keymap(
+	"n",
+	"<leader>sp",
+	'<cmd>lua require("spectre").open_file_search({select_word=true})<CR>',
+	{ desc = "Search on current file" }
+)
 
 --[[插件名: persisted 会话管理
 <CR> - Source the session file  -- telescope
