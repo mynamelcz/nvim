@@ -189,4 +189,6 @@ lazy.setup({
 	"djoshea/vim-autoread",
 	---------------- 数据递增  -----------------
 	"triglav/vim-visual-increment",
+
+	"leosmaia21/gcompilecommands.nvim",
 })

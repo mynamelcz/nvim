@@ -77,11 +77,11 @@ lspconfig["lua_ls"].setup({
 		},
 	},
 })
-capabilities.offsetEncoding = { "utf-16" }
+-- capabilities.offsetEncoding = { "utf-16" }
 lspconfig["clangd"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
-	filetypes = { "c", "cpp", "objc", "objcpp" },
+	-- filetypes = { "c", "cpp", "objc", "objcpp" },
 	single_file_support = true,
 })
 

@@ -2,6 +2,7 @@ import os
 import re
 import json
 
+# 宏定义
 DEFINES = ["-DUSE_STD_DRIVER"]
 
 srcs = []
@@ -40,7 +41,8 @@ dump = []
 args = []
 args.append(toolchain)
 args.extend(flags)
-args.append(DEFINES)
+for tmp in DEFINES:
+    args.append(tmp)
 args.extend(sysincdirs)
 args.extend(incdirs)
 print(args)

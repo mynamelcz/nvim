@@ -29,8 +29,6 @@ require("plugins.todo-comment")
 -- 快速定位光标  flash 插件
 -- 文件浏览
 require("plugins.nvim-tree")
--- 文件类型图标
--- require("plugins.nvim-web-devicons")
 -- 状态栏
 require("plugins.lualine")
 require("plugins.bufferline")

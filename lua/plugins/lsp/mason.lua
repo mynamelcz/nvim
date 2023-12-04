@@ -28,6 +28,7 @@ mason_lspconfig.setup({
 		"jsonls",
 		"pyright",
 		"rust_analyzer",
+		"clangd",
 	},
 	automatic_installation = true, -- not the same as ensure_installed
 })

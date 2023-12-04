@@ -24,10 +24,11 @@ persisted.setup({
 	},
 })
 local group = vim.api.nvim_create_augroup("PersistedHooks", {})
+
 vim.api.nvim_create_autocmd({ "User" }, {
 	pattern = "PersistedTelescopeLoadPre",
 	group = group,
 	callback = function()
-		vim.api.nvim_input("<ESC>:%bd<CR>")
+		vim.api.nvim_input("<ESC>:%bd!<CR>")
 	end,
 })

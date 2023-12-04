@@ -41,6 +41,19 @@ formatter.setup({
 				}
 			end,
 		},
+		cpp = {
+			-- clang-format
+			function()
+				return {
+					exe = "clang-format -style=Microsoft",
+					-- args = {},
+					args = { "--assume-filename", vim.api.nvim_buf_get_name(0) },
+					stdin = true,
+					-- try_node_modules = true,
+					cwd = vim.fn.expand("%:p:h"), -- Run clang-format in cwd of the file.
+				}
+			end,
+		},
 		python = {
 			function()
 				return {
