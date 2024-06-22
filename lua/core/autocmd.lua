@@ -27,12 +27,12 @@ autocmd("BufEnter", {
 			+ "r" -- But do continue when pressing enter.
 	end,
 })
-
-autocmd("BufWritePost", {
-	pattern = { "*.lua", "*.py", "*.sh", "*.c", "*.h" },
-	group = myAutoGroup,
-	command = "FormatWrite",
-})
+-- 保存自动格式化
+-- autocmd("BufWritePost", {
+-- 	pattern = { "*.lua", "*.py", "*.sh", "*.c", "*.h" },
+-- 	group = myAutoGroup,
+-- 	command = "FormatWrite",
+-- })
 --- 重新打开缓冲区恢复光标位置
 autocmd("BufReadPost", {
 	pattern = "*",
@@ -44,6 +44,17 @@ autocmd("BufReadPost", {
 	end,
 })
 
+-- Auto create dir when saving a file, in case some intermediate directory does not exist
+autocmd("BufWritePre", {
+	group = myAutoGroup,
+	callback = function(event)
+		if event.match:match("^%w%w+://") then
+			return
+		end
+		local file = vim.loop.fs_realpath(event.match) or event.match
+		vim.fn.mkdir(vim.fn.fnamemodify(file, ":p:h"), "p")
+	end,
+})
 --- 运行当前python文件
 autocmd("FileType", {
 	pattern = "python",

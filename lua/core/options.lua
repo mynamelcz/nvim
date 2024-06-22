@@ -38,7 +38,7 @@ opt.cursorline = true -- 高亮光标所在行
 opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
 
 -- opt.iskeyword:append("-") -- consider string-string as whole word
-opt.history = 100 -- 历史命令条数
+opt.history = 300 -- 历史命令条数
 opt.showtabline = 2 -- 永远显示tabline(窗口上方的文件名)
 opt.timeoutlen = 300 -- 命令超时时间 单位ms
 opt.updatetime = 300 -- 无操作时交换文件刷写到磁盘的时间
@@ -48,13 +48,17 @@ opt.backup = false -- 是否开启文件备份
 opt.swapfile = false -- 是否开启交换文件
 opt.writebackup = false
 opt.pumheight = 18 -- 补全最多显示15行
--- opt.cmdheight = 0 -- 不输入命令时隐藏命令行
--- opt.lazyredraw = true -- lazily redraw screen
 
--- -- jkhl 移动时光标周围保留8行
--- -- vim.o.scrolloff = 8
--- -- vim.o.sidescrolloff = 8
--- vim.o.shiftround = true
+opt.pumblend = 10 -- Popup blend
+opt.splitkeep = "screen"
+opt.undofile = true
+opt.undolevels = 10000
+opt.virtualedit = "block" -- Allow cursor to move where there is no text in visual block mode
+opt.wildmode = "longest:full,full" -- Command-line completion mode
+opt.winminwidth = 5 -- Minimum window width
+opt.scrolloff = 4 -- Lines of context
+opt.sidescrolloff = 8 -- Columns of context
+opt.shiftround = true -- Round indent
 -- -- 当文件被外部程序修改时，自动加载
 -- vim.o.autoread = true
 -- vim.bo.autoread = true

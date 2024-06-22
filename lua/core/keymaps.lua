@@ -43,10 +43,10 @@ keymap("n", "<A-h>", ":bprevious<CR>", opts)
 keymap("n", "<A-l>", ":bnext<CR>", opts)
 
 -- 调整窗口大小
-keymap("n", "<C-k>", ":resize -2<CR>", opts)
-keymap("n", "<C-j>", ":resize +2<CR>", opts)
-keymap("n", "<C-l>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-h>", ":vertical resize +2<CR>", opts)
+keymap("n", "<C-Up>", "<cmd>resize +2<cr>", opts)
+-- keymap("n", "<C-Down>", "<cmd>resize -2<cr>", opts)
+-- keymap("n", "<C-Left>", "<cmd>vertical resize -2<cr>", opts)
+keymap("n", "<C-Right>", "<cmd>vertical resize +2<cr>", opts)
 
 keymap("n", "<C-p>", "<C-a>", opts) -- 数字加
 keymap("n", "<C-d>", "<C-x>", opts) -- 数字减
@@ -84,7 +84,6 @@ keymap("n", "qq", ":wq<CR>", opts)
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 
--- cscope
 vim.cmd([[
   function! QuickFixToggle()
     if empty(filter(getwininfo(), 'v:val.quickfix'))
@@ -137,6 +136,9 @@ keymap("n", "<leader>gfc", "<cmd>Telescope git_bcommits<cr>", opts) -- list git 
 keymap("n", "<leader>gb", "<cmd>Telescope git_branches<cr>", opts) -- list git branches (use <cr> to checkout) ["gb" for git branch]
 keymap("n", "<leader>gs", "<cmd>Telescope git_status<cr>", opts) -- list current changes per file with diff preview ["gs" for git status]
 
+-- :%s//<C-r><C-w>/g
+keymap("n", "<leader>cw", ":%s/<C-r><C-w>/", opts)
+
 --[[插件名: tagbar ]]
 keymap("n", "tl", ":Tagbar<cr>", opts)
 
@@ -154,6 +156,60 @@ keymap(
 	"<leader>sp",
 	'<cmd>lua require("spectre").open_file_search({select_word=true})<CR>',
 	{ desc = "Search on current file" }
+)
+
+
+
+local NS = { noremap = true, silent = true }
+-- Aligns to 1 character
+vim.keymap.set(
+    'x',
+    'aa',
+    function()
+        require'align'.align_to_char({
+            length = 1,
+        })
+    end,
+    NS
+)
+
+-- Aligns to 2 characters with previews
+vim.keymap.set(
+    'x',
+    'ad',
+    function()
+        require'align'.align_to_char({
+            preview = true,
+            length = 2,
+        })
+    end,
+    NS
+)
+
+-- Aligns to a string with previews
+vim.keymap.set(
+    'x',
+    'aw',
+    function()
+        require'align'.align_to_string({
+            preview = true,
+            regex = false,
+        })
+    end,
+    NS
+)
+
+-- Aligns to a Vim regex with previews
+vim.keymap.set(
+    'x',
+    'ar',
+    function()
+        require'align'.align_to_string({
+            preview = true,
+            regex = true,
+        })
+    end,
+    NS
 )
 
 --[[插件名: persisted 会话管理

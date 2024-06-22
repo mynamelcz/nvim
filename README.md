@@ -1,17 +1,26 @@
-# NVIM
-    NVIM-CONF
+# key:  
+       leader[]-sp 在当前文件内替换
+       leader[]-sw 
+       leader[]-S
+       leader[]-c 执行替换 
 
-	'moall/vim-bbye",
+a= 1
+b   = 3
+c   = 6
+
+
+moall/vim-bbye",
+
 	--------------------- 基本api  ------------------
-	'NVIM-lua/plenary.NVIM',
+	'12-lua/plenary.12',
 	--------------------- 启动时间 --------------------
 	{ 'dstein64/vim-startuptime", cmd = 'StartupTime' },
 	------------------ Buffer Only--------------------
-	{ 'numtostr/BufOnly.NVIM", cmd = 'BufOnly' },
+	{ 'numtostr/BufOnly.12", cmd = 'BufOnly' },
 	--------------------- 启动界面 --------------------
-	'goolord/alpha-NVIM",
+	'goolord/alpha-12",
 	--------------------- 弹窗窗口 --------------------
-	'rcarriga/NVIM-notify",
+	'rcarriga/12-notifyoo",
 	------------------ 最大化当前窗口 --------------------
 	'szaw/vim-maximizer",
 

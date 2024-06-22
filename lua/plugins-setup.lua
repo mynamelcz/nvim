@@ -45,6 +45,15 @@ lazy.setup({
 	"windwp/nvim-spectre",
 	------------------ 多光标  ---------------
 	"mg979/vim-visual-multi",
+	------------------ 文本对齐  ---------------
+	{
+		"Vonr/align.nvim",
+		branch = "v2",
+		lazy = true,
+		init = function()
+			-- Create your mappings here
+		end,
+	},
 	------------------ 搜索弹窗 ----------------
 	{
 		"nvim-telescope/telescope.nvim",

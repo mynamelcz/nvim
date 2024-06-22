@@ -52,4 +52,3 @@ require("plugins.trouble")
 require("plugins.markdown-preview")
 -- 自动命令
 require("core.autocmd")
--- require("core.cscope")
