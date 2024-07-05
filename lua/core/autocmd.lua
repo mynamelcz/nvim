@@ -28,11 +28,12 @@ autocmd("BufEnter", {
 	end,
 })
 -- 保存自动格式化
--- autocmd("BufWritePost", {
--- 	pattern = { "*.lua", "*.py", "*.sh", "*.c", "*.h" },
--- 	group = myAutoGroup,
--- 	command = "FormatWrite",
--- })
+autocmd("BufWritePost", {
+	-- pattern = { "*.lua", "*.py", "*.sh", "*.c", "*.h" },
+	pattern = { "*.lua", "*.py", "*.sh" },
+	group = myAutoGroup,
+	command = "FormatWrite",
+})
 --- 重新打开缓冲区恢复光标位置
 autocmd("BufReadPost", {
 	pattern = "*",

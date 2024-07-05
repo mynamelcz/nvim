@@ -158,70 +158,48 @@ keymap(
 	{ desc = "Search on current file" }
 )
 
-
-
 local NS = { noremap = true, silent = true }
 -- Aligns to 1 character
-vim.keymap.set(
-    'x',
-    'aa',
-    function()
-        require'align'.align_to_char({
-            length = 1,
-        })
-    end,
-    NS
-)
+vim.keymap.set("x", "aa", function()
+	require("align").align_to_char({
+		length = 1,
+	})
+end, NS)
 
 -- Aligns to 2 characters with previews
-vim.keymap.set(
-    'x',
-    'ad',
-    function()
-        require'align'.align_to_char({
-            preview = true,
-            length = 2,
-        })
-    end,
-    NS
-)
+vim.keymap.set("x", "ad", function()
+	require("align").align_to_char({
+		preview = true,
+		length = 2,
+	})
+end, NS)
 
 -- Aligns to a string with previews
-vim.keymap.set(
-    'x',
-    'aw',
-    function()
-        require'align'.align_to_string({
-            preview = true,
-            regex = false,
-        })
-    end,
-    NS
-)
+vim.keymap.set("x", "aw", function()
+	require("align").align_to_string({
+		preview = true,
+		regex = false,
+	})
+end, NS)
 
 -- Aligns to a Vim regex with previews
-vim.keymap.set(
-    'x',
-    'ar',
-    function()
-        require'align'.align_to_string({
-            preview = true,
-            regex = true,
-        })
-    end,
-    NS
-)
+vim.keymap.set("x", "ar", function()
+	require("align").align_to_string({
+		preview = true,
+		regex = true,
+	})
+end, NS)
 
 --[[插件名: persisted 会话管理
 <CR> - Source the session file  -- telescope
 <C-d> - Delete the session file -- telescope
-:SessionToggle - Determines whether to load, start or stop a session
-:SessionStart - Start recording a session. Useful if autosave = false
-:SessionStop - Stop recording a session
-:SessionSave - Save the current session
-:SessionLoad - Load the session for the current directory and current branch if git_use_branch = true
+:SessionToggle   - Determines whether to load, start or stop a session
+:SessionStart    - Start recording a session. Useful if autosave = false
+:SessionStop     - Stop recording a session
+:SessionSave     - Save the current session
+:SessionLoad     - Load the session for the current directory and current branch if git_use_branch = true
 :SessionLoadLast - Load the last session
-:SessionDelete - Delete the current session
+:SessionDelete   - Delete the current session
 Note: The author only binds :SessionToggle to a keymap for simplicity.
 --]]
 

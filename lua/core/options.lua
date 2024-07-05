@@ -59,6 +59,9 @@ opt.winminwidth = 5 -- Minimum window width
 opt.scrolloff = 4 -- Lines of context
 opt.sidescrolloff = 8 -- Columns of context
 opt.shiftround = true -- Round indent
+
+vim.cmd("set nomodeline")
+
 -- -- 当文件被外部程序修改时，自动加载
 -- vim.o.autoread = true
 -- vim.bo.autoread = true
