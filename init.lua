@@ -47,5 +47,6 @@ require("plugins.lsp.lspconfig")
 require("plugins.lsp.formatter")
 require("plugins.lsp.ui")
 require("plugins.trouble")
+require("plugins.inlay-hint")
 -- 自动命令
 require("core.autocmd")

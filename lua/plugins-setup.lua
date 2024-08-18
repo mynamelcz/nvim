@@ -15,38 +15,42 @@ local lazy = require("lazy")
 lazy.setup({
 	{ "folke/neoconf.nvim", cmd = "Neoconf" },
 	"folke/neodev.nvim",
-
 	"moll/vim-bbye",
-	--------------------- 基本api  ------------------
+	---------------------基本api---------------------
 	"nvim-lua/plenary.nvim",
-	--------------------- 启动时间 --------------------
+	---------------------启动时间---------------------
 	{ "dstein64/vim-startuptime", cmd = "StartupTime" },
-	------------------ Buffer Only--------------------
+	---------------------Buffer Only---------------------
 	{ "numtostr/BufOnly.nvim", cmd = "BufOnly" },
-	--------------------- 启动界面 --------------------
+	---------------------启动界面---------------------
 	"goolord/alpha-nvim",
-	--------------------- 弹窗窗口 --------------------
+	---------------------弹窗窗口---------------------
 	"rcarriga/nvim-notify",
-	------------------ 最大化当前窗口 --------------------
+	---------------------最大化当前窗口---------------------
 	"szw/vim-maximizer",
-	--------------------- 主题设置 --------------------
+	---------------------主题设置---------------------
 	"sainnhe/everforest",
 	"EdenEast/nightfox.nvim",
 	"Mofiqul/vscode.nvim",
 	"folke/tokyonight.nvim",
-	------------------ 文件浏览 -----------------
+	"ellisonleao/gruvbox.nvim",
+	---------------------文件浏览---------------------
 	"nvim-tree/nvim-tree.lua",
-	------------------ 文件图标 -----------------
+	---------------------文件图标---------------------
 	"kyazdani42/nvim-web-devicons",
-	------------------上下状态栏 ----------------
+	---------------------上下状态栏---------------------
 	"akinsho/bufferline.nvim",
 	"nvim-lualine/lualine.nvim",
-	------------------搜索替换   ----------------
+	---------------------搜索替换---------------------
 	"nvim-pack/nvim-spectre",
 	-- "MagicDuck/grug-far.nvim",
-	------------------ 多光标  ---------------
+	---------------------多光标---------------------
 	"mg979/vim-visual-multi",
-	------------------ 文本对齐  ---------------
+	---------------------数据递增---------------------
+	"triglav/vim-visual-increment",
+	---------------------自动更新文件---------------------
+	"djoshea/vim-autoread",
+	---------------------文本对齐---------------------
 	{
 		"Vonr/align.nvim",
 		branch = "v2",
@@ -55,7 +59,7 @@ lazy.setup({
 			-- Create your mappings here
 		end,
 	},
-	------------------ 搜索弹窗 ----------------
+	---------------------搜索弹窗---------------------
 	{
 		"nvim-telescope/telescope.nvim",
 		dependencies = {
@@ -70,7 +74,7 @@ lazy.setup({
 			{ "benfowler/telescope-luasnip.nvim" },
 		},
 	},
-	--------------- 命   令   行 --------------
+	---------------------命   令   行---------------------
 	{
 		"folke/noice.nvim",
 		dependencies = {
@@ -78,23 +82,17 @@ lazy.setup({
 			"rcarriga/nvim-notify",
 		},
 	},
-	---------------- 会话管理 --------------
+	---------------------会话管理---------------------
 	"olimorris/persisted.nvim",
-	---------------- 语法高亮 -----------------
-	-- 	"nvim-treesitter/nvim-treesitter",
-	---------------- 彩色括号 -----------------
-	-- "p00f/nvim-ts-rainbow",
-	---------------- 缩进线   -----------------
+	---------------------缩进线---------------------
 	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
-	---------------- 注    释 -----------------
+	---------------------注    释---------------------
 	"numToStr/Comment.nvim",
-
-	----------------   TODO   -----------------
+	---------------------TODO---------------------
 	"folke/todo-comments.nvim",
-
-	---------------- GIT 提示  -----------------
+	---------------------GIT 提示---------------------
 	"lewis6991/gitsigns.nvim", -- 左则git提示
-	---------------- 跳     转  -----------------
+	---------------------跳     转---------------------
 	{
 		"folke/flash.nvim",
 		event = "VeryLazy",
@@ -143,17 +141,14 @@ lazy.setup({
 			},
 		},
 	},
-	---------------- 括号补全 -----------------
+	---------------------括号补全---------------------
 	"windwp/nvim-autopairs",
 	"kylechui/nvim-surround",
-	---------------- 快速替换 -----------------
+	---------------------快速替换---------------------
 	"vim-scripts/ReplaceWithRegister",
-	---------------- 终    端 -----------------
+	---------------------终    端---------------------
 	{ "akinsho/toggleterm.nvim", version = "v2.*" },
-
-	---------------- tag 列表 --------------------
-	"preservim/tagbar",
-	--------------------- LSP --------------------
+	---------------------LSP---------------------
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
 	"neovim/nvim-lspconfig",
@@ -181,11 +176,13 @@ lazy.setup({
 	"rafamadriz/friendly-snippets", -- useful snippets
 	-- 代码格式化
 	"mhartington/formatter.nvim",
-	---------------- 自动更新文件 -----------------
-	"djoshea/vim-autoread",
-	---------------- 数据递增  -----------------
-	"triglav/vim-visual-increment",
-	--------------- 显示错误列表 -----------------
+	-- hint
+	{
+		"felpafel/inlay-hint.nvim",
+		event = "LspAttach",
+		config = true,
+	},
+	---------------------显示错误列表---------------------
 	{
 		"folke/trouble.nvim",
 		opts = {}, -- for default options, refer to the configuration section for custom setup.
@@ -223,4 +220,10 @@ lazy.setup({
 			},
 		},
 	},
+	---------------------tag 列表---------------------
+	-- "preservim/tagbar",
+	---------------------语法高亮---------------------
+	-- 	"nvim-treesitter/nvim-treesitter",
+	---------------------彩色括号---------------------
+	-- "p00f/nvim-ts-rainbow",
 })

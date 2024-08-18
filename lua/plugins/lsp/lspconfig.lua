@@ -21,7 +21,7 @@ local on_attach = function(client, bufnr)
 	-- Code Actions
 	keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts) -- see available code actions
 	-- 重命名
-	keymap.set("n", "gr", "<cmd>Lspsaga rename<CR>", opts) -- smart rename
+	keymap.set("n", "\\r", "<cmd>Lspsaga rename<CR>", opts) -- smart rename
 
 	-- 查看函数定义
 	keymap.set("n", "ge", "<cmd>Lspsaga peek_definition<CR>", opts) -- see definition and make edits in window
