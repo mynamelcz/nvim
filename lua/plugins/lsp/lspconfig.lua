@@ -21,7 +21,7 @@ local on_attach = function(client, bufnr)
 	-- Code Actions
 	keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts) -- see available code actions
 	-- 重命名
-	keymap.set("n", "\\r", "<cmd>Lspsaga rename<CR>", opts) -- smart rename
+	keymap.set("n", "gr", "<cmd>Lspsaga rename<CR>", opts) -- smart rename
 
 	-- 查看函数定义
 	keymap.set("n", "ge", "<cmd>Lspsaga peek_definition<CR>", opts) -- see definition and make edits in window
@@ -31,7 +31,6 @@ local on_attach = function(client, bufnr)
 	-- 显示错误信息
 	-- keymap.set("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts) -- jump to previous diagnostic in buffer
 	-- keymap.set("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
-	keymap.set("n", "\\e", ":TroubleToggle<CR>", opts) -- jump to previous diagnostic in buffer
 	-- 显示函数变量列表
 	keymap.set("n", "go", "<cmd>Lspsaga outline<CR>", opts) -- see outline on right hand side
 	-- keymap.set("n", "gs", "<cmd>Lspsaga signature_help<CR>", opts)
