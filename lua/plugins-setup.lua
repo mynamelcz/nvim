@@ -42,7 +42,8 @@ lazy.setup({
 	"akinsho/bufferline.nvim",
 	"nvim-lualine/lualine.nvim",
 	------------------搜索替换   ----------------
-	"windwp/nvim-spectre",
+	"nvim-pack/nvim-spectre",
+	-- "MagicDuck/grug-far.nvim",
 	------------------ 多光标  ---------------
 	"mg979/vim-visual-multi",
 	------------------ 文本对齐  ---------------
@@ -69,13 +70,6 @@ lazy.setup({
 			{ "benfowler/telescope-luasnip.nvim" },
 		},
 	},
-	---------------- markdown预览 -------------
-	{
-		"iamcco/markdown-preview.nvim",
-		build = "cd app && npm install",
-		ft = { "markdown" },
-		-- commit = "02cc3874738bc0f86e4b91f09b8a0ac88aef8e96",
-	},
 	--------------- 命   令   行 --------------
 	{
 		"folke/noice.nvim",
@@ -87,12 +81,9 @@ lazy.setup({
 	---------------- 会话管理 --------------
 	"olimorris/persisted.nvim",
 	---------------- 语法高亮 -----------------
-	{
-		"nvim-treesitter/nvim-treesitter",
-		commit = "74a7da4e4be5ee71e9efb6d7bdffa16ad620cc57",
-	},
+	-- 	"nvim-treesitter/nvim-treesitter",
 	---------------- 彩色括号 -----------------
-	"p00f/nvim-ts-rainbow",
+	-- "p00f/nvim-ts-rainbow",
 	---------------- 缩进线   -----------------
 	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 	---------------- 注    释 -----------------
@@ -179,7 +170,13 @@ lazy.setup({
 	"hrsh7th/cmp-cmdline", -- { name = 'cmdline' }
 	"hrsh7th/cmp-nvim-lsp-signature-help", -- { name = 'nvim_lsp_signature_help' }
 	-- 代码段补全
-	"L3MON4D3/LuaSnip", -- snippet engine
+	{
+		"L3MON4D3/LuaSnip",
+		-- follow latest release.
+		version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+		-- install jsregexp (optional!).
+		build = "make install_jsregexp",
+	},
 	"saadparwaiz1/cmp_luasnip", -- for autocompletion
 	"rafamadriz/friendly-snippets", -- useful snippets
 	-- 代码格式化
@@ -198,6 +195,6 @@ lazy.setup({
 	"djoshea/vim-autoread",
 	---------------- 数据递增  -----------------
 	"triglav/vim-visual-increment",
-
 	"leosmaia21/gcompilecommands.nvim",
+	"github/copilot.vim",
 })

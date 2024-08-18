@@ -139,9 +139,6 @@ keymap("n", "<leader>gs", "<cmd>Telescope git_status<cr>", opts) -- list current
 -- :%s//<C-r><C-w>/g
 keymap("n", "<leader>cw", ":%s/<C-r><C-w>/", opts)
 
---[[插件名: tagbar ]]
-keymap("n", "tl", ":Tagbar<cr>", opts)
-
 --[[插件名: spectre ]]
 keymap("n", "<leader>S", '<cmd>lua require("spectre").toggle()<CR>', { desc = "Toggle Spectre" })
 keymap(

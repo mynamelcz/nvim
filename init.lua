@@ -19,7 +19,7 @@ require("plugins.nvim-notify")
 -- 缩进线
 require("plugins.indent-blankline")
 -- 语法高亮
-require("plugins.treesitter")
+-- require("plugins.treesitter")
 -- 括号补全
 require("plugins.autopairs")
 require("plugins.nvim-surround")
@@ -36,19 +36,16 @@ require("plugins.bufferline")
 require("plugins.nvim-spectre")
 -- 文件搜索
 require("plugins.telescope")
--- 代码高亮
-require("plugins.treesitter")
 -- GIT 状态显示
 require("plugins.gitsigns")
 -- 自动补全
 require("plugins.lsp.nvim-cmp")
+require("plugins.luasnip")
 -- LSP
 require("plugins.lsp.mason")
 require("plugins.lsp.lspconfig")
 require("plugins.lsp.formatter")
 require("plugins.lsp.ui")
 require("plugins.trouble")
--- markdown
-require("plugins.markdown-preview")
 -- 自动命令
 require("core.autocmd")

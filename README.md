@@ -1,15 +1,15 @@
 # key:  
-       leader[]-sp 在当前文件内替换
-       leader[]-sw 
-       leader[]-S
-       leader[]-c 执行替换 
+       aaaaaja[]-sp 在当前文件内替换
+       aaaaaja[]-sw 
+       aaaaaja[]-S
+       aaaaaja[]-c 执行替换 
 
 a= 1
 b   = 3
 c   = 6
 
 
-moall/vim-bbye",
+aa/vim-bbye",
 
 	--------------------- 基本api  ------------------
 	'12-lua/plenary.12',
@@ -24,3 +24,7 @@ moall/vim-bbye",
 	------------------ 最大化当前窗口 --------------------
 	'szaw/vim-maximizer",
 
+
+
+
+git clone https://github.com/github/copilot.vim.git $HOME/AppData/Local/nvim/pack/github/start/copilot.vim

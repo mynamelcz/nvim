@@ -57,14 +57,6 @@ dashboard.section.footer.val = {
 
 local nvim_path = vim.fn.stdpath("config")
 dashboard.section.buttons.val = {
-
-	-- button("e", "  New file", "<cmd>ene <CR>"),
-	-- button("SPC f f", "󰈞  Find file"),
-	-- button("SPC f h", "󰊄  Recently opened files"),
-	-- button("SPC f r", "  Frecency/MRU"),
-	-- button("SPC f g", "󰈬  Find word"),
-	-- button("SPC f m", "  Jump to bookmarks"),
-	-- button("SPC s l", "  Open last session"),
 	dashboard.button("1", "  Projects", ":Telescope persisted<CR>"),
 	dashboard.button("2", "  Recently opened files", ":Telescope oldfiles <CR>"),
 	dashboard.button("3", "  Find File", ":Telescope find_files <CR>"),
