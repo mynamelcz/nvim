@@ -28,9 +28,6 @@ local on_attach = function(client, bufnr)
 	keymap.set("n", "gd", "<cmd>Lspsaga goto_definition<CR>", opts) -- see definition and make edits in window
 	-- 查看函数说明注释
 	keymap.set("n", "gk", "<cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
-	-- 显示错误信息
-	-- keymap.set("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts) -- jump to previous diagnostic in buffer
-	-- keymap.set("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
 	-- 显示函数变量列表
 	keymap.set("n", "go", "<cmd>Lspsaga outline<CR>", opts) -- see outline on right hand side
 	-- keymap.set("n", "gs", "<cmd>Lspsaga signature_help<CR>", opts)

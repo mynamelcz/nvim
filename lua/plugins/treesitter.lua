@@ -5,12 +5,9 @@ end
 
 treesitter.setup({
 	ensure_installed = {
-		"c",
-		"cpp",
 		"python",
 		"markdown",
 		"lua",
-		"vim",
 	},
 	-- 启用基于 Treesitter 的代码格式化(=)
 	indent = { enable = true },

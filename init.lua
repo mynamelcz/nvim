@@ -23,6 +23,8 @@ require("plugins.indent-blankline")
 -- 括号补全
 require("plugins.autopairs")
 require("plugins.nvim-surround")
+-- 窗口最大化
+require("plugins.window")
 -- 注释
 require("plugins.comment")
 require("plugins.todo-comment")
@@ -32,6 +34,8 @@ require("plugins.nvim-tree")
 -- 状态栏
 require("plugins.lualine")
 require("plugins.bufferline")
+--一个特别炫酷的光标移动特效，在侧边栏亮瞎狗眼
+require("plugins.smoothcursor")
 -- 搜索替换
 require("plugins.nvim-spectre")
 -- 文件搜索

@@ -27,7 +27,24 @@ lazy.setup({
 	---------------------弹窗窗口---------------------
 	"rcarriga/nvim-notify",
 	---------------------最大化当前窗口---------------------
-	"szw/vim-maximizer",
+	-- "szw/vim-maximizer",
+	"anuvyklack/middleclass",
+	"anuvyklack/animation.nvim",
+	{
+		"anuvyklack/windows.nvim",
+		requires = {
+			"anuvyklack/middleclass",
+			"anuvyklack/animation.nvim",
+		},
+		config = function()
+			vim.o.winwidth = 10
+			vim.o.winminwidth = 10
+			vim.o.equalalways = false
+			require("windows").setup()
+		end,
+	},
+	---------------------左侧小箭头显示当前行 --------------
+	"gen740/SmoothCursor.nvim",
 	---------------------主题设置---------------------
 	"sainnhe/everforest",
 	"EdenEast/nightfox.nvim",
@@ -148,7 +165,9 @@ lazy.setup({
 	"vim-scripts/ReplaceWithRegister",
 	---------------------终    端---------------------
 	{ "akinsho/toggleterm.nvim", version = "v2.*" },
-	---------------------LSP---------------------
+	--------------------- DAP ---------------------
+	"mfussenegger/nvim-dap",
+	--------------------- LSP ---------------------
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
 	"neovim/nvim-lspconfig",
@@ -220,6 +239,14 @@ lazy.setup({
 			},
 		},
 	},
+	-- -------------------- markdown ---------------------
+	-- {
+	-- 	"MeanderingProgrammer/render-markdown.nvim",
+	-- 	opts = {},
+	-- 	dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.nvim" }, -- if you use the mini.nvim suite
+	-- 	-- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
+	-- 	-- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
+	-- },
 	---------------------tag 列表---------------------
 	-- "preservim/tagbar",
 	---------------------语法高亮---------------------

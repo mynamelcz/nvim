@@ -17,5 +17,7 @@
 
 
 
+call dein#add('lvimuser/lsp-inlayhints.nvim')
+call dein#install()
 
 
